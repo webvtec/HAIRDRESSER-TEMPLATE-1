@@ -722,14 +722,24 @@
 <div class="content-section" id="bookingSection">
   <h1 class="page-title">Book Your Appointment</h1>
 
-  <div class="info-box">
-    🌸 <strong style="color:var(--rose);">Hours:</strong> Mon – Sat: 8:00 AM – 5:00 PM<br>
-    🌙 <strong style="color:var(--gold);">After 5 PM:</strong> Late Night Fee of <strong style="color:var(--rose);">$2,500</strong> applies<br>
-    ⏱ <strong style="color:var(--rose);">Lateness Policy:</strong><br>
-    &nbsp;&nbsp;• 15 min late — <strong style="color:var(--rose);">+$500</strong><br>
-    &nbsp;&nbsp;• 30 min late — <strong style="color:var(--rose);">+$1,000</strong><br>
-    &nbsp;&nbsp;• 45 min late — <strong style="color:var(--rose);">Appointment CANCELLED</strong><br>
-    💳 <strong style="color:var(--rose);">Deposit required</strong> to confirm booking
+  <div class="info-box" style="max-width:420px; margin:0 auto 18px; padding:16px 18px; font-size:13px; line-height:1.8;">
+    <div style="font-weight:700; color:var(--gold); font-size:11px; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px;">The House Rules</div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Working Days</span><span>Monday – Saturday</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hours</span><span>8:00 AM – 5:00 PM</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Sunday</span><span>Closed</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">After 5 PM</span><span>Late Night Fee: $2,500</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hair Length</span><span>4 inches &amp; over only</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Guests</span><span>No extra company</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hair Condition</span><span>Must be clean</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Deposit</span><span style="color:var(--rose); font-weight:700;">$2,000 required</span></div>
+    <div style="margin-top:10px; padding:8px 12px; background:rgba(200,68,106,0.06); border:1px solid rgba(200,68,106,0.2); border-radius:6px;">
+      <div style="font-weight:700; color:var(--gold); font-size:10px; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">⌛ Lateness Policy</div>
+      <div style="display:flex; justify-content:space-between; padding:3px 0;"><span style="color:var(--muted); font-size:12px;">15 min late</span><span style="color:var(--rose); font-weight:700; font-size:12px;">CANCELLED</span></div>
+    </div>
+    <div style="margin-top:10px; padding:8px 12px; background:rgba(200,68,106,0.05); border:1px solid rgba(200,68,106,0.18); border-radius:6px; display:flex; gap:8px; align-items:flex-start;">
+      <span style="font-size:14px; flex-shrink:0;">🏦</span>
+      <div style="font-size:12px; line-height:1.6; color:var(--muted);">Send deposit to <strong style="color:var(--text);">Scotiabank · Anita Mcfarlane · Acc# 1031697</strong> (Savings, JMD). Use your booking reference as the transfer note.</div>
+    </div>
   </div>
 
   <form onsubmit="submitBooking(event)">
@@ -744,58 +754,54 @@
 
     <label for="selectedTime">Available Times:</label>
     <select id="selectedTime" required>
-      <option value="">COMPLETE FORM TO SEE AVAILABLE SLOTS</option>
+      <option value="">Complete form to see available slots</option>
     </select>
 
-    <!-- Service Category -->
-    <label for="ageGroup">Service Category:</label>
-    <select id="ageGroup" onchange="onAgeGroupChange();">
-      <option value="NONE">— Choose a Category —</option>
-      <option value="hair">HAIR SERVICES</option>
-      <option value="lashes">LASH SERVICES</option>
-      <option value="beauty">BEAUTY & GROOMING</option>
-    </select>
-
-    <!-- Hair Services -->
-    <div id="adultServiceWrap" style="display:none;">
+    <!-- Hair Service (direct — no category step) -->
+    <div id="adultServiceWrap">
       <label for="adultService">Hair Service:</label>
       <select id="adultService" onchange="onServiceChange();">
         <option value="NONE">— Choose Your Service —</option>
-        <option value="hair-Box Braids">Box Braids — from $8,000</option>
-        <option value="hair-Knotless Braids">Knotless Braids — from $10,000</option>
-        <option value="hair-Cornrows">Cornrows — from $3,500</option>
-        <option value="hair-Weave Install">Weave Install — from $6,000</option>
-        <option value="hair-Closure Sew-In">Closure Sew-In — from $8,000</option>
-        <option value="hair-Frontal Sew-In">Frontal Sew-In — from $10,000</option>
-        <option value="hair-Loc Retwist">Loc Retwist — from $4,000</option>
-        <option value="hair-Silk Press">Silk Press — from $4,500</option>
-        <option value="hair-Hair Colour">Hair Colour — from $5,000</option>
-        <option value="hair-Trim & Style">Trim & Style — from $3,000</option>
-        <option value="hair-Other">Other — $0</option>
-      </select>
-    </div>
-
-    <!-- Lash Services -->
-    <div id="teenServiceWrap" style="display:none;">
-      <label for="teenService">Lash Service:</label>
-      <select id="teenService" onchange="onServiceChange();">
-        <option value="NONE">— Choose Your Service —</option>
-        <option value="lashes-Singles Eye Lash">Singles Eye Lash — $3,500</option>
-        <option value="lashes-Clusters">Clusters — $4,500</option>
-        <option value="lashes-Strip Lash">Strip Lash — $2,500</option>
-        <option value="lashes-Other">Other — $0</option>
-      </select>
-    </div>
-
-    <!-- Beauty & Grooming -->
-    <div id="kidsServiceWrap" style="display:none;">
-      <label for="kidsService">Beauty & Grooming:</label>
-      <select id="kidsService" onchange="onServiceChange();">
-        <option value="NONE">— Choose Your Service —</option>
-        <option value="beauty-Eyebrow Shaping">Eyebrow Shaping — $1,000</option>
-        <option value="beauty-Eyebrow Wax">Eyebrow Wax — $1,500</option>
-        <option value="beauty-Eyebrow Tint">Eyebrow Tint — $1,000</option>
-        <option value="beauty-Other">Other — $0</option>
+        <optgroup label="Braids">
+          <option value="hair-Knotless Box Braids">Knotless Box Braids — from $8,000</option>
+          <option value="hair-Boho Knotless Braids">Boho Knotless Braids — from $9,000</option>
+          <option value="hair-Goddess Knotless Braids">Goddess Knotless Braids — from $9,500</option>
+          <option value="hair-Tribal Braids">Tribal Braids — from $8,000</option>
+          <option value="hair-Fulani Braids">Fulani Braids — from $8,500</option>
+          <option value="hair-Lemonade Braids">Lemonade Braids — from $9,500</option>
+          <option value="hair-Box Braids">Box Braids — from $7,500</option>
+          <option value="hair-Jumbo Braids">Jumbo Braids — from $8,000</option>
+        </optgroup>
+        <optgroup label="Twists">
+          <option value="hair-Island Twist">Island Twist — from $10,000</option>
+          <option value="hair-Passion Twists">Passion Twists — from $8,500</option>
+          <option value="hair-Mini Twists">Mini Twists — from $10,000</option>
+        </optgroup>
+        <optgroup label="Locs">
+          <option value="hair-Soft Locs">Soft Locs — from $10,000</option>
+          <option value="hair-Butterfly Locs">Butterfly Locs — from $11,000</option>
+          <option value="hair-Faux Locs">Faux Locs — from $9,000</option>
+        </optgroup>
+        <optgroup label="Cornrows">
+          <option value="hair-Straight Back Cornrows">Straight Back Cornrows — from $5,000</option>
+          <option value="hair-Design Cornrows">Design Cornrows — from $5,000</option>
+          <option value="hair-Zig-Zag Cornrows">Zig-Zag Cornrows — from $5,000</option>
+        </optgroup>
+        <optgroup label="Weaves">
+          <option value="hair-Natural Sew-In">Natural Sew-In — from $8,000</option>
+          <option value="hair-Closure Sew-In">Closure Sew-In — from $10,000</option>
+          <option value="hair-Frontal Sew-In">Frontal Sew-In — from $12,000</option>
+        </optgroup>
+        <optgroup label="Quick Weave">
+          <option value="hair-Basic Quick Weave">Basic Quick Weave — from $5,000</option>
+          <option value="hair-Styled Quick Weave">Styled Quick Weave — from $6,000</option>
+          <option value="hair-Closure Quick Weave">Closure Quick Weave — from $7,000</option>
+        </optgroup>
+        <optgroup label="Ponytails">
+          <option value="hair-Sleek Ponytail">Sleek Ponytail — from $4,500</option>
+          <option value="hair-Braided Ponytail">Braided Ponytail — from $5,000</option>
+          <option value="hair-Half-Up Half-Down Ponytail">Half-Up Half-Down Ponytail — from $7,000</option>
+        </optgroup>
       </select>
     </div>
 
@@ -843,82 +849,181 @@
 <div class="content-section" id="walkInPriceSection">
   <h1 class="page-title">Price List</h1>
 
-  <div class="info-box">
-    🌸 Open Mon – Sat: <strong style="color:var(--rose);">8:00 AM – 5:00 PM</strong><br>
-    🌙 After 5 PM: Late Night Fee of <strong style="color:var(--rose);">$2,500</strong><br>
-    💳 <strong style="color:var(--rose);">Deposit required</strong> to confirm your appointment
-  </div>
-
-  <div class="notice-card">
-    ⏱ <strong>Lateness Policy:</strong><br>
-    • 15 min late — <strong style="color:var(--rose);">+$500</strong><br>
-    • 30 min late — <strong style="color:var(--rose);">+$1,000</strong><br>
-    • 45 min late — <strong style="color:var(--rose);">Appointment CANCELLED</strong>
+  <div class="info-box" style="max-width:420px; margin:0 auto 18px; text-align:center;">
+    Mon – Sat · 8:00 AM – 5:00 PM · After 5 PM: Late Night Fee $2,500 · Deposit required
   </div>
 
   <div style="max-width:420px; margin:0 auto; padding:0 16px 80px;">
 
-    <!-- HAIR SERVICES -->
+    <!-- Lateness Policy -->
+    <div class="price-card">
+      <div class="price-card-header" style="background:linear-gradient(135deg,var(--rose) 0%,var(--rose2) 100%);">
+        <span>⌛ Lateness Policy</span>
+      </div>
+      <div style="padding:8px 0 4px;">
+        <div class="price-row"><span>15 min late</span><span style="color:var(--rose);font-weight:700;">CANCELLED</span></div>
+        <div class="price-row"><span>Late Night Fee (after 5 PM)</span><span>$2,500</span></div>
+        <div class="price-row"><span>Deposit</span><span style="color:var(--rose);font-weight:700;">$2,000 REQUIRED</span></div>
+      </div>
+    </div>
+
+    <!-- HAIR SERVICES (expandable) -->
     <div class="price-card">
       <div class="price-card-header">
         <span>🌸 Hair Services</span>
       </div>
-      <div style="padding:8px 0 4px;">
-        <div class="price-section-label">Braids & Protective Styles</div>
-        <div class="price-row"><span>Box Braids</span><span>from $8,000</span></div>
-        <div class="price-row"><span>Knotless Braids</span><span>from $10,000</span></div>
-        <div class="price-row"><span>Cornrows</span><span>from $3,500</span></div>
-        <div class="price-section-label">Weaves & Extensions</div>
-        <div class="price-row"><span>Weave Install</span><span>from $6,000</span></div>
-        <div class="price-row"><span>Closure Sew-In</span><span>from $8,000</span></div>
-        <div class="price-row"><span>Frontal Sew-In</span><span>from $10,000</span></div>
-        <div class="price-section-label">Natural & Styling</div>
-        <div class="price-row"><span>Loc Retwist</span><span>from $4,000</span></div>
-        <div class="price-row"><span>Silk Press</span><span>from $4,500</span></div>
-        <div class="price-row"><span>Hair Colour</span><span>from $5,000</span></div>
-        <div class="price-row"><span>Trim & Style</span><span>from $3,000</span></div>
-        <div class="price-section-label">Optional Add-Ons</div>
-        <div class="price-row"><span>Custom Design / Accessories</span><span>$500+</span></div>
-      </div>
+      <div style="padding:8px 14px 14px;" id="hairPriceList"></div>
     </div>
 
-    <!-- LASH SERVICES -->
-    <div class="price-card">
-      <div class="price-card-header">
-        <span>👁 Lash Services</span>
-      </div>
-      <div style="padding:8px 0 4px;">
-        <div class="price-row"><span>Singles Eye Lash</span><span>$3,500</span></div>
-        <div class="price-row"><span>Clusters</span><span>$4,500</span></div>
-        <div class="price-row"><span>Strip Lash</span><span>$2,500</span></div>
-      </div>
-    </div>
+    <style>
+      .price-style-card { margin-bottom:10px; border-radius:6px; overflow:hidden; border:1px solid rgba(200,68,106,0.12); background:rgba(253,248,245,0.7); }
+      .price-style-head { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; cursor:pointer; user-select:none; background:rgba(200,68,106,0.05); transition:background 0.2s; }
+      .price-style-head:hover { background:rgba(200,68,106,0.1); }
+      .price-style-name { font-family:'Playfair Display','Montserrat',serif; font-size:14px; font-weight:600; color:var(--text); letter-spacing:0.5px; }
+      .price-style-name small { display:block; font-size:10px; font-weight:400; color:var(--muted); font-style:italic; margin-top:2px; }
+      .price-style-from { font-size:12px; color:var(--rose); font-weight:700; white-space:nowrap; font-family:'Montserrat',sans-serif; }
+      .price-style-toggle { font-size:14px; color:var(--gold); margin-left:8px; transition:transform 0.25s; }
+      .price-style-card.open .price-style-toggle { transform:rotate(180deg); }
+      .price-style-body { display:none; padding:8px 14px 12px; border-top:1px solid rgba(200,68,106,0.1); }
+      .price-style-card.open .price-style-body { display:block; }
+      .price-size-title { margin-top:8px; margin-bottom:4px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); }
+      .price-size-title:first-child { margin-top:0; }
+      .price-row-inner { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px solid rgba(200,68,106,0.06); }
+      .price-row-inner:last-child { border-bottom:none; }
+      .price-row-inner .label { font-size:13px; color:var(--text); }
+      .price-row-inner .amt { font-size:13px; color:var(--rose); font-weight:700; white-space:nowrap; }
+      .price-group-divider { margin:14px 0 8px; padding:6px 10px; border-radius:3px; background:rgba(200,68,106,0.08); border-left:3px solid var(--rose); font-family:'Playfair Display',serif; font-style:italic; font-size:13px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text); }
+      .price-group-divider:first-child { margin-top:4px; }
+    </style>
 
-    <!-- BEAUTY & GROOMING -->
-    <div class="price-card">
-      <div class="price-card-header">
-        <span>✨ Beauty & Grooming</span>
-      </div>
-      <div style="padding:8px 0 4px;">
-        <div class="price-row"><span>Eyebrow Shaping</span><span>$1,000</span></div>
-        <div class="price-row"><span>Eyebrow Wax</span><span>$1,500</span></div>
-        <div class="price-row"><span>Eyebrow Tint</span><span>$1,000</span></div>
-      </div>
-    </div>
-
-    <!-- FEES -->
-    <div class="price-card">
-      <div class="price-card-header" style="background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);">
-        <span>ℹ️ Fees & Policies</span>
-      </div>
-      <div style="padding:8px 0 4px;">
-        <div class="price-row"><span>Late Night Fee (after 5 PM)</span><span>$2,500</span></div>
-        <div class="price-row"><span>15 Min Late</span><span>+$500</span></div>
-        <div class="price-row"><span>30 Min Late</span><span>+$1,000</span></div>
-        <div class="price-row"><span style="color:var(--rose); font-weight:600;">45 Min Late</span><span style="color:var(--rose); font-weight:700;">CANCELLED</span></div>
-        <div class="price-row"><span>Deposit</span><span style="color:var(--rose); font-weight:700;">REQUIRED</span></div>
-      </div>
-    </div>
+    <script>
+      (function buildHairPriceList() {
+        const PRICE_DATA = [
+          { group: 'Braids', styles: [
+            { name: 'Knotless Box Braids', sizes: {
+                'Large': [['Bra-strap length',8000],['Mid-back length',9000],['Waist length',10000],['Hip length',11000],['Tailbone length',12000],['Classic length',14000],['Mid-thigh length',18000]],
+                'Medium': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',11000],['Hip length',12000],['Tailbone length',13000],['Classic length',16000],['Mid-thigh length',20000]],
+                'Small': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',12000],['Hip length',13000],['Tailbone length',15000],['Classic length',17000],['Mid-thigh length',22000]]
+            }},
+            { name: 'Boho Knotless Braids', sizes: {
+                'Large': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',20000],['Mid-thigh length',23000]],
+                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]],
+                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]]
+            }},
+            { name: 'Goddess Knotless Braids', sizes: {
+                'Large': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',20500],['Mid-thigh length',23500]],
+                'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]],
+                'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]]
+            }},
+            { name: 'Tribal Braids', sizes: {
+                'Large': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',12000],['Hip length',14000],['Tailbone length',16000],['Classic length',18000],['Mid-thigh length',21000]],
+                'Medium': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',19000],['Mid-thigh length',22000]],
+                'Small': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',21000],['Mid-thigh length',24000]]
+            }},
+            { name: 'Fulani Braids', sizes: {
+                'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]],
+                'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',19500],['Mid-thigh length',22500]],
+                'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',21500],['Mid-thigh length',24500]]
+            }},
+            { name: 'Lemonade Braids', sizes: {
+                'Medium': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]],
+                'Small': [['Bra-strap length',11500],['Mid-back length',12500],['Waist length',14500],['Hip length',16500],['Tailbone length',18500],['Classic length',20500],['Mid-thigh length',23500]]
+            }},
+            { name: 'Box Braids', sizes: {
+                'Large': [['Bra-strap length',7500],['Mid-back length',8500],['Waist length',9500],['Hip length',10500],['Tailbone length',11500],['Classic length',13500],['Mid-thigh length',17000]],
+                'Medium': [['Bra-strap length',8500],['Mid-back length',9500],['Waist length',10500],['Hip length',11500],['Tailbone length',12500],['Classic length',15000],['Mid-thigh length',19000]],
+                'Small': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',11500],['Hip length',12500],['Tailbone length',14000],['Classic length',16000],['Mid-thigh length',21000]]
+            }},
+            { name: 'Jumbo Braids', subtitle: 'Large only', sizes: {
+                'Large': [['Mid-back length',8000],['Waist length',9000],['Hip length',10000],['Tailbone length',11000],['Classic length',13000],['Mid-thigh length',16000]]
+            }}
+          ]},
+          { group: 'Twists', styles: [
+            { name: 'Island Twist', sizes: {
+                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]],
+                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]]
+            }},
+            { name: 'Passion Twists', sizes: {
+                'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500]],
+                'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500]],
+                'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500]]
+            }},
+            { name: 'Mini Twists', sizes: {
+                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000]],
+                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000]]
+            }}
+          ]},
+          { group: 'Locs', styles: [
+            { name: 'Soft Locs', sizes: {
+                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]],
+                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]]
+            }},
+            { name: 'Butterfly Locs', sizes: {
+                'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]],
+                'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]]
+            }},
+            { name: 'Faux Locs', sizes: {
+                'Medium': [['Armpit length',9000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]],
+                'Small': [['Armpit length',9000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]]
+            }}
+          ]},
+          { group: 'Cornrows', styles: [
+            { name: 'Straight Back Cornrows', sizes: { 'Options': [['2–4 Cornrows',5000],['5–6 Cornrows',5500],['7–8 Cornrows',6000],['9–10 Cornrows',6500],['11–12 Cornrows',7000]] }},
+            { name: 'Design Cornrows', sizes: { 'Options': [['Simple Design',5000],['Medium Design',6000],['Detailed Design',7000],['Complex / Custom Design','8,000 – 9,000']] }},
+            { name: 'Zig-Zag Cornrows', sizes: { 'Options': [['Basic Zig-Zag',5000],['Medium Pattern',6000],['Detailed Pattern',7000],['Complex Pattern','8,000 – 9,000']] }}
+          ]},
+          { group: 'Weave Services', styles: [
+            { name: 'Natural Sew-In', sizes: { 'Options': [['Basic Install','8,000+']] }},
+            { name: 'Closure Sew-In', sizes: { 'Options': [['Basic Install','10,000+']] }},
+            { name: 'Frontal Sew-In', sizes: { 'Options': [['Basic Install','12,000+']] }}
+          ]},
+          { group: 'Quick Weave', styles: [
+            { name: 'Basic Quick Weave', sizes: { 'Options': [['Basic Install',5000],['With Styling',6000]] }},
+            { name: 'Styled Quick Weave', sizes: { 'Options': [['Basic Install',6000],['With Styling',7000]] }},
+            { name: 'Closure Quick Weave', sizes: { 'Options': [['Basic Install',7000],['With Styling',8000]] }}
+          ]},
+          { group: 'Ponytails', styles: [
+            { name: 'Sleek Ponytail', sizes: { 'Options': [['Basic Style','4,500+']] }},
+            { name: 'Braided Ponytail', sizes: { 'Options': [['Basic Style','5,000+']] }},
+            { name: 'Half-Up Half-Down Ponytail', sizes: { 'Options': [['Basic Style','7,000+']] }}
+          ]}
+        ];
+        function fmtPrice(p) { return typeof p === 'number' ? '$' + p.toLocaleString() : '$' + p; }
+        function minPrice(sizes) {
+          let min = Infinity;
+          Object.values(sizes).forEach(rows => rows.forEach(([, p]) => { const n = typeof p === 'number' ? p : parseInt(String(p).replace(/[^\d]/g,''),10); if (!isNaN(n) && n < min) min = n; }));
+          return min === Infinity ? 0 : min;
+        }
+        const container = document.getElementById('hairPriceList');
+        if (!container) return;
+        let html = '';
+        PRICE_DATA.forEach(group => {
+          html += `<div class="price-group-divider">${group.group}</div>`;
+          group.styles.forEach(style => {
+            const min = minPrice(style.sizes);
+            const subtitleHTML = style.subtitle ? `<small>${style.subtitle}</small>` : '';
+            html += `<div class="price-style-card" onclick="this.classList.toggle('open')">
+              <div class="price-style-head">
+                <div class="price-style-name">${style.name}${subtitleHTML}</div>
+                <div style="display:flex;align-items:center;">
+                  <span class="price-style-from">from $${min.toLocaleString()}</span>
+                  <span class="price-style-toggle">▾</span>
+                </div>
+              </div>
+              <div class="price-style-body">`;
+            Object.entries(style.sizes).forEach(([sizeName, rows]) => {
+              if (sizeName !== 'Options') html += `<div class="price-size-title">${sizeName}</div>`;
+              rows.forEach(([lengthName, price]) => {
+                html += `<div class="price-row-inner"><span class="label">${lengthName}</span><span class="amt">${fmtPrice(price)}</span></div>`;
+              });
+            });
+            html += `</div></div>`;
+          });
+        });
+        html += `<div style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(200,68,106,0.1);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:6px;">Optional Extra</div><div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="font-size:13px;color:var(--text);">Custom Design / Accessories</span><span style="font-size:13px;color:var(--rose);font-weight:700;white-space:nowrap;">$500+</span></div></div>`;
+        container.innerHTML = html;
+      })();
+    </script>
 
   </div>
 </div>
@@ -1133,46 +1238,81 @@
 
   // ===== BUSINESS HOURS =====
   const businessHours = {
-    'Monday':    { open: '8:00 AM',  close: '5:00 PM' },
-    'Tuesday':   { open: '8:00 AM',  close: '5:00 PM' },
-    'Wednesday': { open: '8:00 AM',  close: '5:00 PM' },
-    'Thursday':  { open: '8:00 AM',  close: '5:00 PM' },
-    'Friday':    { open: '8:00 AM',  close: '5:00 PM' },
-    'Saturday':  { open: '8:00 AM',  close: '5:00 PM' },
+    'Monday':    { open: '8:00 AM', close: '5:00 PM' },
+    'Tuesday':   { open: '8:00 AM', close: '5:00 PM' },
+    'Wednesday': { open: '8:00 AM', close: '5:00 PM' },
+    'Thursday':  { open: '8:00 AM', close: '5:00 PM' },
+    'Friday':    { open: '8:00 AM', close: '5:00 PM' },
+    'Saturday':  { open: '8:00 AM', close: '5:00 PM' },
+    // Sunday closed
   };
 
-  const walkInDays = [];
+  // ===== SERVICE DURATIONS (minutes) =====
+  const SERVICE_DURATIONS = {
+    'Large — Bra-strap length': 240, 'Large — Mid-back length': 300, 'Large — Waist length': 330,
+    'Large — Hip length': 360, 'Large — Tailbone length': 390, 'Large — Classic length': 420,
+    'Large — Mid-thigh length': 480,
+    'Medium — Armpit length': 300, 'Medium — Bra-strap length': 330, 'Medium — Mid-back length': 360,
+    'Medium — Waist length': 390, 'Medium — Hip length': 420, 'Medium — Tailbone length': 450,
+    'Medium — Classic length': 510, 'Medium — Mid-thigh length': 600,
+    'Small — Armpit length': 360, 'Small — Bra-strap length': 390, 'Small — Mid-back length': 420,
+    'Small — Waist length': 450, 'Small — Hip length': 480, 'Small — Tailbone length': 540,
+    'Small — Classic length': 600, 'Small — Mid-thigh length': 720,
+    '2–4 Cornrows': 45, '5–6 Cornrows': 60, '7–8 Cornrows': 90, '9–10 Cornrows': 120, '11–12 Cornrows': 150,
+    'Simple Design': 90, 'Medium Design': 120, 'Detailed Design': 150, 'Complex / Custom Design': 210,
+    'Basic Zig-Zag': 90, 'Medium Pattern': 120, 'Detailed Pattern': 150, 'Complex Pattern': 210,
+    'Basic Install': 150, 'With Styling': 180, 'Basic Style': 60,
+  };
 
-  function getServiceDurationByKey(key) { return 30; }
-  const serviceDurations = new Proxy({}, { get(_, key) { return getServiceDurationByKey(key); } });
+  const STYLE_DEFAULT_DURATIONS = {
+    'Knotless Box Braids': 360, 'Boho Knotless Braids': 390, 'Goddess Knotless Braids': 420,
+    'Tribal Braids': 330, 'Fulani Braids': 360, 'Lemonade Braids': 360,
+    'Box Braids': 300, 'Jumbo Braids': 240,
+    'Island Twist': 390, 'Passion Twists': 360, 'Mini Twists': 420,
+    'Soft Locs': 360, 'Butterfly Locs': 390, 'Faux Locs': 360,
+    'Straight Back Cornrows': 90, 'Design Cornrows': 120, 'Zig-Zag Cornrows': 120,
+    'Natural Sew-In': 210, 'Closure Sew-In': 270, 'Frontal Sew-In': 330,
+    'Basic Quick Weave': 90, 'Styled Quick Weave': 120, 'Closure Quick Weave': 150,
+    'Sleek Ponytail': 45, 'Braided Ponytail': 60, 'Half-Up Half-Down Ponytail': 90,
+  };
+
+  function getServiceDurationByKey(key) {
+    const styleName = key.replace(/^hair-/, '');
+    if (selectedCutItem) {
+      const itemKey = selectedCutItem; // e.g. "Large — Bra-strap length"
+      if (SERVICE_DURATIONS[itemKey]) return SERVICE_DURATIONS[itemKey];
+    }
+    return STYLE_DEFAULT_DURATIONS[styleName] || 240;
+  }
+
+  function getSelectedServiceDuration() {
+    const haircut = document.getElementById('adultService')?.value || "NONE";
+    return getServiceDurationByKey(haircut);
+  }
+
+  function showEstimateTime() {}
+
+  // ===== ADDON PRICES =====
+  const addonPrices = { 'Custom Design / Accessories': 500 };
+  const cutPriceOverrides = {};
+
+  let selectedCutPrice = null;
+  let selectedCutItem = null;
+  let selectedAddons = new Set();
 
   function getSelectedServices() {
-    const haircut = document.getElementById('haircutType')?.value || "NONE";
+    const haircut = document.getElementById('adultService')?.value || "NONE";
     if (!haircut || haircut === 'NONE') return 'No services selected';
     const def = pricingCardDefs[haircut];
-    const isOther = def && def.isOther;
-    if (isOther && selectedAddons.size === 0) return 'No services selected';
     const packageLabel = def ? def.label : haircut;
     const parts = [packageLabel];
-    if (selectedCutItem) parts.push('Service: ' + selectedCutItem);
+    if (selectedCutItem) parts.push('Style: ' + selectedCutItem);
     selectedAddons.forEach(a => parts.push('Add-on: ' + a));
     return parts.join(' | ');
   }
 
-  function getSelectedServiceDuration() { return getServiceDurationByKey(document.getElementById('haircutType').value); }
-  function showEstimateTime() {}
-
-  const addonPrices = {
-    'Eyebrow Shaping': 1000, 'Eyebrow Wax': 1500, 'Eyebrow Tint': 1000,
-    'Singles Eye Lash': 3500, 'Clusters': 4500, 'Strip Lash': 2500,
-    'Custom Design / Accessories': 500,
-  };
-
-  const cutPriceOverrides = {};
-  let selectedCutPrice = null;
-
   function getSelectedTotal() {
-    const haircut = document.getElementById('haircutType')?.value || 'NONE';
+    const haircut = document.getElementById('adultService')?.value || 'NONE';
     if (!haircut || haircut === 'NONE') return 0;
     const def = pricingCardDefs[haircut];
     let total = selectedCutPrice !== null ? selectedCutPrice : (def?.basePrice || 0);
@@ -1180,20 +1320,18 @@
     return total;
   }
 
-  let selectedCutItem = null;
-  let selectedAddons = new Set();
-
   function toggleCut(el, name) {
     document.querySelectorAll('.cut-item.selected').forEach(e => e.classList.remove('selected'));
     if (selectedCutItem === name) {
       selectedCutItem = null; selectedCutPrice = null;
     } else {
       selectedCutItem = name; el.classList.add('selected');
-      const haircut = document.getElementById('haircutType')?.value || 'NONE';
+      const haircut = document.getElementById('adultService')?.value || 'NONE';
       const overrides = cutPriceOverrides[haircut];
       selectedCutPrice = (overrides && overrides[name] !== undefined) ? overrides[name] : null;
     }
     updateSelectionSummary();
+    loadAvailableSlots();
   }
 
   function toggleAddon(el, name) {
@@ -1209,12 +1347,16 @@
     const parts = [];
     if (selectedCutItem) parts.push('✨ ' + selectedCutItem);
     selectedAddons.forEach(a => parts.push('+ ' + a));
-    if (parts.length === 0) {
-      summaryBox.style.display = 'none'; summaryText.innerHTML = '';
-    } else {
+    if (parts.length === 0) { summaryBox.style.display = 'none'; summaryText.innerHTML = ''; }
+    else {
       summaryBox.style.display = 'block';
       const total = getSelectedTotal();
-      const totalStr = total > 0 ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(200,68,106,0.2);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--rose);">💰 Estimated Total: $${total.toLocaleString()}</div>` : '';
+      const dur = getSelectedServiceDuration();
+      const h = Math.floor(dur/60), m = dur%60;
+      const durLabel = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
+      const totalStr = total > 0
+        ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(200,68,106,0.2);font-weight:700;font-size:13px;color:var(--rose);">💰 Estimated Total: $${total.toLocaleString()} &nbsp;·&nbsp; ⏱ ${durLabel}</div>`
+        : `<div style="margin-top:6px;font-size:12px;color:var(--gold);font-style:italic;">⏱ Est. ${durLabel}</div>`;
       summaryText.innerHTML = parts.map(p => `<span style="display:inline-block;background:rgba(200,68,106,0.1);border:1px solid rgba(200,68,106,0.25);border-radius:20px;padding:3px 10px;margin:3px 3px 3px 0;font-size:12px;color:var(--rose);font-weight:600;">${p}</span>`).join('') + totalStr;
     }
   }
@@ -1225,23 +1367,36 @@
     updateSelectionSummary();
   }
 
-  function getSelectedItemsString(packageLabel) {
-    const parts = [];
-    if (packageLabel) parts.push(packageLabel);
-    if (selectedCutItem) parts.push('Service: ' + selectedCutItem);
-    selectedAddons.forEach(a => parts.push('Add-on: ' + a));
-    return parts.join(' | ');
-  }
+  // ===== PRICING CARD BUILDER =====
+  (function injectCardStyles() {
+    const s = document.createElement('style');
+    s.textContent = `
+      .cut-item, .addon-item { padding:9px 12px; border-bottom:1px solid rgba(200,68,106,0.1); display:flex; justify-content:space-between; align-items:center; cursor:pointer; border-radius:6px; transition:background 0.15s; user-select:none; -webkit-tap-highlight-color:transparent; }
+      .cut-item:hover, .addon-item:hover { background:rgba(200,68,106,0.07); }
+      .cut-item.selected { background:rgba(200,68,106,0.12); border-left:3px solid var(--rose); }
+      .addon-item.selected { background:rgba(201,149,108,0.1); border-left:3px solid var(--gold); }
+      .item-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; display:inline-block; }
+      .item-label { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text); font-family:'Montserrat',sans-serif; }
+      .item-price { font-size:12px; color:var(--rose); font-weight:700; white-space:nowrap; margin-left:8px; }
+      .item-dur { font-size:10px; color:var(--gold); margin-left:4px; opacity:0.85; }
+      .item-check { font-size:14px; margin-left:6px; color:var(--rose); }
+      .card-section-title { margin:10px 0 4px; color:var(--gold); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:1px; padding:0 2px; }
+      .tap-hint { font-size:11px; color:var(--muted); text-align:center; padding:6px 0 2px; font-style:italic; }
+    `;
+    document.head.appendChild(s);
+  })();
 
-  function buildCutRow(name, price, isAddon) {
+  function buildCutRow(name, price, isAddon, durationMins) {
     const cls = isAddon ? 'addon-item' : 'cut-item';
     const dotColor = isAddon ? 'var(--gold)' : 'var(--rose)';
     const fn = isAddon ? `toggleAddon(this,'${name.replace(/'/g,"\\'")}')` : `toggleCut(this,'${name.replace(/'/g,"\\'")}')`;
     const priceStr = price && price !== '$' ? `<span class="item-price">${price}</span>` : '';
-    return `<div class="${cls}" onclick="${fn}">
-      <span class="item-label"><span class="item-dot" style="background:${dotColor};"></span>${name}${priceStr}</span>
-      <span class="item-check">☐</span>
-    </div>`;
+    let durStr = '';
+    if (!isAddon && durationMins) {
+      const h = Math.floor(durationMins/60), m = durationMins%60;
+      durStr = `<span class="item-dur">${h > 0 ? h+'h' : ''}${m > 0 ? m+'m' : ''}</span>`;
+    }
+    return `<div class="${cls}" onclick="${fn}"><span class="item-label"><span class="item-dot" style="background:${dotColor};"></span>${name}${priceStr}${durStr}</span><span class="item-check">☐</span></div>`;
   }
 
   document.addEventListener('click', function(e) {
@@ -1253,16 +1408,21 @@
   });
 
   function buildPricingCard(headerHTML, sections, basePrice) {
-    const priceTag = basePrice ? `<div style="margin:10px 0 6px;text-align:center;"><span style="display:inline-block;background:var(--rose);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;padding:6px 22px;border-radius:20px;">from $${Number(basePrice).toLocaleString()}</span></div>` : '<div style="margin:6px 0 4px;text-align:center;font-family:\'Montserrat\',sans-serif;font-size:12px;letter-spacing:1px;color:#aaa;font-style:italic;">Choose your add-ons below</div>';
+    const hasCutSections = sections.some(s => (s.items || []).some(it => !it.isAddon));
+    const priceTag = basePrice
+      ? `<div style="margin:10px 0 6px;text-align:center;"><span style="display:inline-block;background:var(--rose);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;padding:6px 22px;border-radius:20px;">from $${Number(basePrice).toLocaleString()}</span></div>`
+      : hasCutSections
+        ? '<div style="margin:6px 0 4px;text-align:center;font-family:\'Montserrat\',sans-serif;font-size:12px;letter-spacing:1px;color:var(--muted);">👇 Tap a size &amp; length below to set your price</div>'
+        : '<div style="margin:6px 0 4px;text-align:center;font-family:\'Montserrat\',sans-serif;font-size:12px;letter-spacing:1px;color:var(--muted);">Choose your add-ons below</div>';
     let html = `<div style="background:linear-gradient(135deg,var(--rose) 0%,var(--rose2) 100%);padding:10px 14px;">
       <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#fff;">${headerHTML}</span>
     </div>
     <div style="padding:8px 12px 10px;">
       ${priceTag}
-      <div class="tap-hint">👆 Tap add-ons to include them</div>`;
+      <div class="tap-hint">${hasCutSections ? '👆 Tap a size + length, plus any add-ons' : '👆 Tap add-ons below to include them'}</div>`;
     sections.forEach(sec => {
       if (sec.title) html += `<div class="card-section-title">${sec.title}</div>`;
-      sec.items.forEach(it => { html += buildCutRow(it.name, it.price, it.isAddon); });
+      sec.items.forEach(it => { html += buildCutRow(it.name, it.price, it.isAddon, it.durationMins); });
     });
     html += `</div>`;
     return html;
@@ -1270,99 +1430,84 @@
 
   const pricingCardDefs = {};
 
-  // Hair services
+  // ---- BUILD ALL HAIR SERVICES ----
   (function() {
-    const hairServices = ['Box Braids','Knotless Braids','Cornrows','Weave Install','Closure Sew-In','Frontal Sew-In','Loc Retwist','Silk Press','Hair Colour','Trim & Style'];
-    const hairPrices = {'Box Braids':8000,'Knotless Braids':10000,'Cornrows':3500,'Weave Install':6000,'Closure Sew-In':8000,'Frontal Sew-In':10000,'Loc Retwist':4000,'Silk Press':4500,'Hair Colour':5000,'Trim & Style':3000};
-    const hairAddons = [{ name:'Custom Design / Accessories', price:'$500+' }];
-    hairServices.forEach(svc => {
-      const price = hairPrices[svc] || 0;
-      pricingCardDefs['hair-' + svc] = {
-        label: 'Hair — ' + svc + ' (from $' + price.toLocaleString() + ')',
-        basePrice: price,
-        html: () => buildPricingCard('🌸 Hair — ' + svc.toUpperCase(), [
-          { title: 'Optional Add-Ons:', items: hairAddons.map(a => ({...a, isAddon:true})) }
-        ], price)
+    const hairAddons = [{name:'Custom Design / Accessories', price:'$500+'}];
+    const hairStyles = {
+      'Knotless Box Braids': { sizes: { 'Large': [['Bra-strap length',8000],['Mid-back length',9000],['Waist length',10000],['Hip length',11000],['Tailbone length',12000],['Classic length',14000],['Mid-thigh length',18000]], 'Medium': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',11000],['Hip length',12000],['Tailbone length',13000],['Classic length',16000],['Mid-thigh length',20000]], 'Small': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',12000],['Hip length',13000],['Tailbone length',15000],['Classic length',17000],['Mid-thigh length',22000]] } },
+      'Boho Knotless Braids': { sizes: { 'Large': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',20000],['Mid-thigh length',23000]], 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]] } },
+      'Goddess Knotless Braids': { sizes: { 'Large': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',20500],['Mid-thigh length',23500]], 'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]], 'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]] } },
+      'Tribal Braids': { sizes: { 'Large': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',12000],['Hip length',14000],['Tailbone length',16000],['Classic length',18000],['Mid-thigh length',21000]], 'Medium': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',19000],['Mid-thigh length',22000]], 'Small': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',21000],['Mid-thigh length',24000]] } },
+      'Fulani Braids': { sizes: { 'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]], 'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',19500],['Mid-thigh length',22500]], 'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',21500],['Mid-thigh length',24500]] } },
+      'Lemonade Braids': { sizes: { 'Medium': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]], 'Small': [['Bra-strap length',11500],['Mid-back length',12500],['Waist length',14500],['Hip length',16500],['Tailbone length',18500],['Classic length',20500],['Mid-thigh length',23500]] } },
+      'Box Braids': { sizes: { 'Large': [['Bra-strap length',7500],['Mid-back length',8500],['Waist length',9500],['Hip length',10500],['Tailbone length',11500],['Classic length',13500],['Mid-thigh length',17000]], 'Medium': [['Bra-strap length',8500],['Mid-back length',9500],['Waist length',10500],['Hip length',11500],['Tailbone length',12500],['Classic length',15000],['Mid-thigh length',19000]], 'Small': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',11500],['Hip length',12500],['Tailbone length',14000],['Classic length',16000],['Mid-thigh length',21000]] } },
+      'Jumbo Braids': { subtitle:'Large only', sizes: { 'Large': [['Mid-back length',8000],['Waist length',9000],['Hip length',10000],['Tailbone length',11000],['Classic length',13000],['Mid-thigh length',16000]] } },
+      'Island Twist': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]] } },
+      'Passion Twists': { sizes: { 'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500]], 'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500]], 'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500]] } },
+      'Mini Twists': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000]] } },
+      'Soft Locs': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]] } },
+      'Butterfly Locs': { sizes: { 'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]], 'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]] } },
+      'Faux Locs': { sizes: { 'Medium': [['Armpit length',9000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]], 'Small': [['Armpit length',9000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]] } },
+      'Straight Back Cornrows': { sizes: { 'Options': [['2–4 Cornrows',5000],['5–6 Cornrows',5500],['7–8 Cornrows',6000],['9–10 Cornrows',6500],['11–12 Cornrows',7000]] } },
+      'Design Cornrows': { sizes: { 'Options': [['Simple Design',5000],['Medium Design',6000],['Detailed Design',7000],['Complex / Custom Design',9000]] } },
+      'Zig-Zag Cornrows': { sizes: { 'Options': [['Basic Zig-Zag',5000],['Medium Pattern',6000],['Detailed Pattern',7000],['Complex Pattern',9000]] } },
+      'Natural Sew-In': { sizes: { 'Options': [['Basic Install',8000]] } },
+      'Closure Sew-In': { sizes: { 'Options': [['Basic Install',10000]] } },
+      'Frontal Sew-In': { sizes: { 'Options': [['Basic Install',12000]] } },
+      'Basic Quick Weave': { sizes: { 'Options': [['Basic Install',5000],['With Styling',6000]] } },
+      'Styled Quick Weave': { sizes: { 'Options': [['Basic Install',6000],['With Styling',7000]] } },
+      'Closure Quick Weave': { sizes: { 'Options': [['Basic Install',7000],['With Styling',8000]] } },
+      'Sleek Ponytail': { sizes: { 'Options': [['Basic Style',4500]] } },
+      'Braided Ponytail': { sizes: { 'Options': [['Basic Style',5000]] } },
+      'Half-Up Half-Down Ponytail': { sizes: { 'Options': [['Basic Style',7000]] } },
+    };
+
+    Object.entries(hairStyles).forEach(([style, data]) => {
+      const key = 'hair-' + style;
+      const subtitle = data.subtitle ? ` (${data.subtitle})` : '';
+      let minPrice = Infinity;
+      Object.values(data.sizes).forEach(lengths => lengths.forEach(([, price]) => { if (price < minPrice) minPrice = price; }));
+      if (minPrice === Infinity) minPrice = 0;
+      const sections = [];
+      Object.entries(data.sizes).forEach(([sizeName, lengths]) => {
+        sections.push({
+          title: sizeName,
+          items: lengths.map(([lengthName, price]) => {
+            const cutKey = sizeName === 'Options' ? lengthName : `${sizeName} — ${lengthName}`;
+            const dur = SERVICE_DURATIONS[cutKey] || SERVICE_DURATIONS[lengthName] || null;
+            return { name: cutKey, price: '$' + price.toLocaleString(), durationMins: dur };
+          })
+        });
+      });
+      sections.push({ title: 'Optional Add-Ons:', items: hairAddons.map(a => ({...a, isAddon:true})) });
+      const overrides = {};
+      Object.entries(data.sizes).forEach(([sizeName, lengths]) => {
+        lengths.forEach(([lengthName, price]) => {
+          const cutKey = sizeName === 'Options' ? lengthName : `${sizeName} — ${lengthName}`;
+          overrides[cutKey] = price;
+        });
+      });
+      cutPriceOverrides[key] = overrides;
+      pricingCardDefs[key] = {
+        label: 'Hair — ' + style + subtitle + ' (from $' + minPrice.toLocaleString() + ')',
+        basePrice: 0,
+        html: () => buildPricingCard('🌸 ' + style.toUpperCase() + subtitle.toUpperCase() + ' | from $' + minPrice.toLocaleString(), sections, 0)
       };
     });
-    pricingCardDefs['hair-Other'] = {
-      label: 'Hair — Other', basePrice: 0, isOther: true,
-      html: () => buildPricingCard('🌸 Hair — Other', [
-        { title: 'Optional Add-Ons:', items: hairAddons.map(a => ({...a, isAddon:true})) }
-      ], 0)
-    };
   })();
-
-  // Lash services
-  (function() {
-    const lashServices = [['Singles Eye Lash',3500],['Clusters',4500],['Strip Lash',2500]];
-    lashServices.forEach(([svc, price]) => {
-      pricingCardDefs['lashes-' + svc] = {
-        label: 'Lashes — ' + svc + ' ($' + price.toLocaleString() + ')',
-        basePrice: price,
-        html: () => buildPricingCard('👁 Lashes — ' + svc.toUpperCase(), [], price)
-      };
-    });
-    pricingCardDefs['lashes-Other'] = {
-      label: 'Lashes — Other', basePrice: 0, isOther: true,
-      html: () => buildPricingCard('👁 Lashes — Other', [], 0)
-    };
-  })();
-
-  // Beauty & Grooming
-  (function() {
-    const beautyServices = [['Eyebrow Shaping',1000],['Eyebrow Wax',1500],['Eyebrow Tint',1000]];
-    beautyServices.forEach(([svc, price]) => {
-      pricingCardDefs['beauty-' + svc] = {
-        label: 'Beauty — ' + svc + ' ($' + price.toLocaleString() + ')',
-        basePrice: price,
-        html: () => buildPricingCard('✨ Beauty — ' + svc.toUpperCase(), [], price)
-      };
-    });
-    pricingCardDefs['beauty-Other'] = {
-      label: 'Beauty — Other', basePrice: 0, isOther: true,
-      html: () => buildPricingCard('✨ Beauty — Other', [], 0)
-    };
-  })();
-
-  const pricingCards = {};
-
-  function onAgeGroupChange() {
-    const group = document.getElementById('ageGroup').value;
-    document.getElementById('adultServiceWrap').style.display = 'none';
-    document.getElementById('teenServiceWrap').style.display = 'none';
-    document.getElementById('kidsServiceWrap').style.display = 'none';
-    document.getElementById('adultService').value = 'NONE';
-    document.getElementById('teenService').value = 'NONE';
-    document.getElementById('kidsService').value = 'NONE';
-    const card = document.getElementById('serviceIncludesCard');
-    const hidden = document.getElementById('haircutType');
-    clearSelections();
-    if (group === 'hair') { document.getElementById('adultServiceWrap').style.display = 'block'; hidden.value = 'NONE'; card.style.display = 'none'; card.innerHTML = ''; }
-    else if (group === 'lashes') { document.getElementById('teenServiceWrap').style.display = 'block'; hidden.value = 'NONE'; card.style.display = 'none'; card.innerHTML = ''; }
-    else if (group === 'beauty') { document.getElementById('kidsServiceWrap').style.display = 'block'; hidden.value = 'NONE'; card.style.display = 'none'; card.innerHTML = ''; }
-    else { hidden.value = 'NONE'; card.style.display = 'none'; card.innerHTML = ''; }
-    loadAvailableSlots();
-  }
 
   function onServiceChange() {
-    const group = document.getElementById('ageGroup').value;
-    let svc = 'NONE';
-    if (group === 'hair') svc = document.getElementById('adultService').value;
-    else if (group === 'lashes') svc = document.getElementById('teenService').value;
-    else if (group === 'beauty') svc = document.getElementById('kidsService').value;
+    const svc = document.getElementById('adultService').value;
     const hidden = document.getElementById('haircutType');
     const card = document.getElementById('serviceIncludesCard');
     clearSelections();
-    hidden.value = (svc === 'NONE') ? 'NONE' : svc;
+    if (hidden) hidden.value = (svc === 'NONE') ? 'NONE' : svc;
     if (svc && svc !== 'NONE' && pricingCardDefs[svc]) {
       card.innerHTML = pricingCardDefs[svc].html();
       card.style.display = 'block';
     } else { card.style.display = 'none'; card.innerHTML = ''; }
     loadAvailableSlots();
   }
-
-  function showServiceIncludes() {}
 
   // ===== TIME UTILS =====
   function convertToMinutes(timeStr) {
@@ -1383,124 +1528,106 @@
     return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
   }
 
-  // ===== SLOT LOADING =====
+  // ===== SMART SEQUENTIAL SLOT LOADING =====
   async function loadAvailableSlots() {
     const date = document.getElementById('date').value;
-    const haircut = document.getElementById('haircutType')?.value || "NONE";
+    const haircut = document.getElementById('adultService')?.value || "NONE";
     const timeSelect = document.getElementById('selectedTime');
     timeSelect.innerHTML = "<option value=''>-- Select a time --</option>";
-    const hasService = haircut !== "NONE";
-    if (!date || !hasService) { timeSelect.innerHTML = "<option value=''>COMPLETE FORM TO SEE AVAILABLE SLOTS</option>"; return; }
+    if (!date || haircut === "NONE") { timeSelect.innerHTML = "<option value=''>COMPLETE FORM TO SEE AVAILABLE SLOTS</option>"; return; }
     const duration = getSelectedServiceDuration();
     const dayName = new Date(date + "T00:00:00").toLocaleDateString('en-US', { weekday: 'long' });
     const business = businessHours[dayName];
-    if (walkInDays.includes(dayName)) { timeSelect.innerHTML = "<option value=''>Appointments only on this day</option>"; return; }
     if (!business) { timeSelect.innerHTML = "<option value=''>Closed this day</option>"; return; }
     const openMinutes = convertToMinutes(business.open);
     const closeMinutes = convertToMinutes(business.close);
+    const lastSlotMinutes = closeMinutes + 60; // allow up to 6 PM (late fee applies)
+    const now = new Date();
+    const isToday = new Date(date + "T00:00:00").getTime() === new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    const currentMinutes = isToday ? now.getHours() * 60 + now.getMinutes() : 0;
+    function formatMins(m) {
+      const h = Math.floor(m/60), min = m%60, ampm = h >= 12 ? "PM" : "AM", dh = ((h+11)%12+1);
+      return `${dh}:${min.toString().padStart(2,"0")} ${ampm}`;
+    }
+    function isUnavailable(slotStart, dur, ranges) {
+      const slotEnd = slotStart + dur;
+      return ranges.some(r => !(slotEnd <= r.start || slotStart >= r.end));
+    }
     try {
-      const SLOT_INTERVAL = 30;
-      const snapshot = await db.collection("bookings").where("date", "==", date).get();
-      const bookings = snapshot.docs
-        .filter(doc => doc.data().status !== 'Cancelled')
-        .map(doc => {
-          const bookedTime = convertToMinutes(normalizeTimeStr(doc.data().time));
-          return { start: bookedTime, end: bookedTime + 30 };
-        });
-      const unavailableSnapshot = await db.collection("unavailableDays").where("date", "==", date).get();
+      const snapshot = await db.collection("bookings").where("date","==",date).get();
+      const bookings = snapshot.docs.filter(doc => doc.data().status !== 'Cancelled')
+        .map(doc => { const d = doc.data(); const s = convertToMinutes(normalizeTimeStr(d.time)); const dur2 = (typeof d.duration === 'number' && d.duration > 30) ? d.duration : 240; return { start: s, end: s + dur2 }; })
+        .sort((a,b) => a.start - b.start);
+      const unavSnap = await db.collection("unavailableDays").where("date","==",date).get();
       let unavailableRanges = [];
-      unavailableSnapshot.forEach(doc => {
+      unavSnap.forEach(doc => {
         const data = doc.data();
-        if (data.allDay) { unavailableRanges.push({ start: openMinutes, end: closeMinutes }); }
-        else {
-          const start = convertToMinutes(normalizeTimeStr(data.startTime));
-          const end = convertToMinutes(normalizeTimeStr(data.endTime));
-          if (!isNaN(start) && !isNaN(end) && end > start) unavailableRanges.push({ start, end });
-        }
+        if (data.allDay) unavailableRanges.push({ start: openMinutes, end: lastSlotMinutes });
+        else { const s = convertToMinutes(normalizeTimeStr(data.startTime)), e = convertToMinutes(normalizeTimeStr(data.endTime)); if (!isNaN(s) && !isNaN(e) && e > s) unavailableRanges.push({ start: s, end: e }); }
       });
-      const now = new Date();
-      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      const selectedDate = new Date(date + "T00:00:00");
-      const isToday = selectedDate.getTime() === today.getTime();
-      const currentMinutes = isToday ? now.getHours() * 60 + now.getMinutes() : 0;
-      function formatMins(m) {
-        const h = Math.floor(m / 60), min = m % 60;
-        const ampm = h >= 12 ? "PM" : "AM";
-        const displayH = ((h + 11) % 12 + 1);
-        return `${displayH}:${min.toString().padStart(2, "0")} ${ampm}`;
+      let candidateSlots = [];
+      if (bookings.length === 0) {
+        const slot = (isToday && currentMinutes >= openMinutes) ? openMinutes + 60 : openMinutes;
+        if (slot + duration <= lastSlotMinutes + 1 && !isUnavailable(slot, duration, unavailableRanges) && !(isToday && slot <= currentMinutes)) candidateSlots.push(slot);
+      } else {
+        let adjusted = bookings[bookings.length - 1].end;
+        for (const r of unavailableRanges) { if (adjusted < r.end && adjusted + duration > r.start) adjusted = r.end; }
+        if (adjusted + duration <= lastSlotMinutes + 1 && !(isToday && adjusted <= currentMinutes)) candidateSlots.push(adjusted);
       }
-      const SLOT_DISPLAY_DURATION = 30;
-      let t = openMinutes;
-      while (t + SLOT_INTERVAL <= closeMinutes + 1) {
-        const slotEnd = t + SLOT_DISPLAY_DURATION;
-        const bookingEnd = t + duration;
-        if (isToday && t <= currentMinutes) { t += SLOT_INTERVAL; continue; }
-        const blockingRange = unavailableRanges.find(r => !(bookingEnd <= r.start || t >= r.end));
-        if (blockingRange) { t = blockingRange.end; continue; }
-        const bookedConflict = bookings.some(b => !(bookingEnd <= b.start || t >= b.end));
-        if (bookedConflict) { t += SLOT_INTERVAL; continue; }
-        const label = `${formatMins(t)} - ${formatMins(slotEnd)}`;
-        let option = document.createElement("option");
-        option.value = formatMins(t);
-        option.textContent = label;
-        timeSelect.appendChild(option);
-        t += SLOT_INTERVAL;
-      }
-      if (timeSelect.options.length === 1) {
-        let option = document.createElement("option");
-        option.value = ""; option.textContent = "No available slots";
-        timeSelect.appendChild(option);
-      }
-    } catch (err) { console.error("Error loading slots:", err); timeSelect.innerHTML = "<option value=''>Error loading slots</option>"; }
+      if (candidateSlots.length === 0) { timeSelect.innerHTML = '<option value="">No available slots for this day</option>'; return; }
+      timeSelect.innerHTML = "<option value=''>-- Select a time --</option>";
+      candidateSlots.forEach(t => {
+        const lateNote = t >= closeMinutes ? " ★ Late Night Fee +$2,500" : "";
+        const opt = document.createElement("option");
+        opt.value = formatMins(t);
+        opt.textContent = `${formatMins(t)} – ${formatMins(t + duration)}${lateNote}`;
+        timeSelect.appendChild(opt);
+      });
+    } catch (err) { console.error(err); timeSelect.innerHTML = "<option value=''>Error loading slots</option>"; }
   }
 
   // ===== BOOKING =====
   function generateBookingNumber(name) {
-    const initials = name.trim().substring(0, 2).toUpperCase();
-    const digits = Math.floor(1000 + Math.random() * 9000);
-    return initials + digits;
+    return name.trim().substring(0,2).toUpperCase() + Math.floor(1000 + Math.random() * 9000);
   }
 
   function validateTimeSlot(date, selectedTime) {
     const dayName = new Date(date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long' });
     const business = businessHours[dayName];
-    if (walkInDays.includes(dayName)) { alert(`Appointments only — please select another day.`); return Promise.resolve(false); }
-    if (!business) { alert(`We are closed on ${dayName}s. Please select another day.`); return Promise.resolve(false); }
+    if (!business) { alert(`We are closed on ${dayName}s.`); return Promise.resolve(false); }
     const selectedMinutes = convertToMinutes(selectedTime);
     const openMinutes = convertToMinutes(business.open);
     const closeMinutes = convertToMinutes(business.close);
-    if (selectedMinutes < openMinutes || selectedMinutes >= closeMinutes) {
-      alert(`Please choose a time within business hours (${business.open} – ${business.close})`);
+    if (selectedMinutes < openMinutes || selectedMinutes >= closeMinutes + 60) {
+      alert(`Please choose a time within hours (${business.open} – 6:00 PM)`);
       return Promise.resolve(false);
     }
-    return db.collection('unavailableDays').where('date', '==', date).get()
-      .then((unavailableSnapshot) => {
-        let isUnavailable = false;
-        unavailableSnapshot.forEach((doc) => {
+    return db.collection('unavailableDays').where('date','==',date).get()
+      .then(unavSnap => {
+        let isUnavail = false;
+        unavSnap.forEach(doc => {
           const data = doc.data();
-          if (data.allDay) { isUnavailable = true; }
+          if (data.allDay) { isUnavail = true; }
           else {
-            const startMinutes = convertToMinutes(normalizeTimeStr(data.startTime));
-            const endMinutes = convertToMinutes(normalizeTimeStr(data.endTime));
-            if (selectedMinutes >= startMinutes && selectedMinutes <= endMinutes) isUnavailable = true;
+            const sm = convertToMinutes(normalizeTimeStr(data.startTime)), em = convertToMinutes(normalizeTimeStr(data.endTime));
+            if (selectedMinutes >= sm && selectedMinutes <= em) isUnavail = true;
           }
         });
-        if (isUnavailable) return false;
-        return db.collection('bookings').where('date', '==', date).get()
-          .then((querySnapshot) => {
-            const newServiceEndTime = selectedMinutes + 30;
-            for (let doc of querySnapshot.docs) {
+        if (isUnavail) return false;
+        return db.collection('bookings').where('date','==',date).get()
+          .then(qSnap => {
+            const newDur = getSelectedServiceDuration();
+            const newEnd = selectedMinutes + newDur;
+            for (let doc of qSnap.docs) {
               const data = doc.data();
               if (data.status === 'Cancelled') continue;
-              let bookedTime = data.time.trim().replace(/\s+/g, ' ');
-              let bookedMinutes = convertToMinutes(bookedTime);
-              let bookedEndTime = bookedMinutes + 30;
-              if (selectedMinutes < bookedEndTime && bookedMinutes < newServiceEndTime) return false;
+              const bm = convertToMinutes(data.time.trim().replace(/\s+/g,' '));
+              const existDur = (typeof data.duration === 'number' && data.duration > 30) ? data.duration : 240;
+              if (selectedMinutes < bm + existDur && bm < newEnd) return false;
             }
             return true;
           });
-      })
-      .catch(error => { console.error("Error validating time slot:", error); return false; });
+      }).catch(() => false);
   }
 
   function submitBooking(event) {
@@ -1513,41 +1640,28 @@
     const time = document.getElementById('selectedTime').value;
     const services = getSelectedServices();
     if (!name || !phone || !date || !time) { alert('Please fill in all required fields.'); return; }
-    if (services === 'No services selected') { alert('Please select at least one service before booking.'); return; }
-    const haircutVal = document.getElementById('haircutType')?.value || 'NONE';
-    const isOtherCut = haircutVal.endsWith('-Other');
-    if (isOtherCut && selectedAddons.size === 0) { alert('Please select at least one add-on for the Other option before booking.'); return; }
+    if (services === 'No services selected') { alert('Please select a service before booking.'); return; }
     const bookingNumber = generateBookingNumber(name);
     const duration = getSelectedServiceDuration();
     const total = getSelectedTotal();
     validateTimeSlot(date, time)
-      .then((isAvailable) => {
-        if (!isAvailable) { alert('This time is not available. Please choose another time.'); return Promise.reject('Time slot not available'); }
-        return db.collection('bookings').add({
-          uid: user.uid, bookingNumber, name, phone, date, time, service: services, duration, total,
-          deposit: "No", timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        });
+      .then(isAvailable => {
+        if (!isAvailable) { alert('This time is not available. Please choose another time.'); return Promise.reject('unavailable'); }
+        return db.collection('bookings').add({ uid: user.uid, bookingNumber, name, phone, date, time, service: services, duration, total, deposit: "No", timestamp: firebase.firestore.FieldValue.serverTimestamp() });
       })
-      .then((docRef) => {
+      .then(docRef => {
         if (!docRef) return;
         const [year, month, day] = date.split("-");
-        const formattedDate = new Date(year, month - 1, day).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+        const formattedDate = new Date(year, month-1, day).toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" });
         const totalStr = total > 0 ? `\n💰 Total: $${total.toLocaleString()}` : '';
         const message = `🌸 NEW BOOKING — ATM BEAUTY STYLES\n\n🔢 Booking #: ${bookingNumber}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n⏰ Time: ${time}\n✨ Service: ${services}${totalStr}`;
         const telegramBotToken = "8624976021:AAH66ZV65h7yF2TzWKzxi3uATSmq6ywWFS4";
         const telegramChatId = "-1003703378968";
-        fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-          method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: telegramChatId, text: message, parse_mode: "HTML" })
-        }).catch(() => {});
+        fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: telegramChatId, text: message, parse_mode:"HTML" }) }).catch(()=>{});
         document.querySelector("#bookingSection form").reset();
         clearSelections();
-        document.getElementById('adultServiceWrap').style.display = 'none';
-        document.getElementById('teenServiceWrap').style.display = 'none';
-        document.getElementById('kidsServiceWrap').style.display = 'none';
         document.getElementById('serviceIncludesCard').style.display = 'none';
         document.getElementById('serviceIncludesCard').innerHTML = '';
-        document.getElementById("estimateTimeMessage").innerHTML = "";
         document.getElementById("selectedTime").innerHTML = "<option value=''>Pick date & service first</option>";
         document.querySelector("#bookingModal h3").style.display = "none";
         document.querySelector("#bookingModal p").innerHTML = `
@@ -1557,40 +1671,30 @@
             <p style="font-size:15px; margin:0 0 6px; font-weight:600;">Booking #: ${bookingNumber}</p>
             <p style="font-size:13px; margin:0 0 6px; color:var(--muted);">📅 ${formattedDate} &nbsp;|&nbsp; ⏰ ${time}</p>
             <p style="font-size:13px; margin:0 0 12px; color:var(--muted); text-align:left; line-height:1.6;">✨ ${services}</p>
-            ${total > 0 ? `<div style="background:var(--blush2); border:1px solid rgba(200,68,106,0.2); border-radius:10px; padding:10px 16px; margin-bottom:14px; font-weight:700; font-size:16px; color:var(--rose);">💰 Total: $${total.toLocaleString()}</div>` : ''}
+            ${total > 0 ? `<div style="background:var(--blush2);border:1px solid rgba(200,68,106,0.2);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-weight:700;font-size:16px;color:var(--rose);">💰 Total: $${total.toLocaleString()}</div>` : ''}
             <hr style="margin:16px 0; border:0; height:1px; background:rgba(200,68,106,0.1);">
             <p style="font-size:14px; margin:10px 0; color:var(--text);">Thank you for booking with ATM Beauty Styles! We can't wait to see you. 🌸</p>
-            <p style="font-size:12px; color:var(--muted); margin:12px 0; text-align:left; line-height:1.6;">⚠️ <strong>Deposit required</strong> — tap the menu icon (top left) and view <b>PAYMENT INFO</b> to complete your deposit. Use your booking number as reference.</p>
+            <div style="background:#fff3f3;border:2px solid var(--rose);border-radius:6px;padding:12px;margin:10px 0;text-align:left;">
+              <div style="font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rose2);margin-bottom:5px;">⚠️ Deposit Required</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.65;">Send your <strong>$2,000 deposit</strong> to <strong>Scotiabank · Anita Mcfarlane · Acc# 1031697</strong> (Savings). Use your booking reference as the note.</div>
+            </div>
             <button onclick="closeBookingModal()" style="margin-top:12px; padding:11px 28px; background:linear-gradient(135deg,var(--rose),var(--rose2)); color:#fff; border:none; border-radius:25px; font-size:14px; cursor:pointer; font-weight:700; font-family:'Montserrat',sans-serif; letter-spacing:1px;">DONE ✨</button>
           </div>
         `;
         document.getElementById('bookingModal').style.display = 'flex';
       })
-      .catch((err) => {
-        if (err === 'Time slot not available') return;
-        if (err.code === 'permission-denied') alert("Permission denied.");
-        else if (err.code === 'unavailable') alert("Service temporarily unavailable. Please try again.");
-        else if (err.code === 'network-request-failed') alert("Network error. Check your connection.");
-        else alert("Failed to save booking. Please try again.");
+      .catch(err => {
+        if (err === 'unavailable') return;
+        if (err && err.code === 'permission-denied') alert("Permission denied.");
+        else if (err && err.code) alert("Failed to save booking. Please try again.");
+        else if (err) console.error(err);
       });
   }
 
   function closeBookingModal() { document.getElementById('bookingModal').style.display = 'none'; }
 
-  // ===== PAYMENT INFO =====
-  function showPaymentInfo() {
-    Swal.fire({
-      title: "<div style='font-family:Playfair Display,serif;font-style:italic;font-size:22px;color:var(--rose);'>Payment Info</div>",
-      html: `<div style="text-align:center; font-size:15px; line-height:1.8; color:#555; font-family:Montserrat,sans-serif;"><p style="font-style:italic;">Payment details coming soon. 🌸</p></div>`,
-      width: 440,
-      confirmButtonText: "CLOSE",
-      background: "#fff",
-      color: "#3D1F2B",
-      confirmButtonColor: "#C8446A",
-    });
-  }
 
-  // ===== REVIEWS =====
+    // ===== REVIEWS =====
   let selectedRating = 0;
 
   document.querySelectorAll('#starRating span').forEach(star => {
