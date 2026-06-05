@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ATM BEAUTY STYLES – Book Your Appointment</title>
+<title>ATM BEAUTY STYLES – Book Your Nail Appointment</title>
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="description" content="ATM BEAUTY STYLES – Premium hair & beauty services in Kingston, Jamaica. Lashes, braids, weaves, colour & more. Book your appointment today.">
-<meta name="keywords" content="ATM Beauty Styles, ATM beauty Jamaica, hair salon Kingston Jamaica, lashes Kingston, braids Kingston Jamaica, weaves Jamaica, beauty salon Hope Road Kingston, hair stylist Kingston, book hair appointment Jamaica">
+<meta name="description" content="ATM BEAUTY STYLES – ATM BEAUTY STYLES – Premium nail services in Kingston, Jamaica. Gel nails, acrylics, nail art & more. Book your appointment today.">
+<meta name="keywords" content="ATM Beauty Styles, ATM beauty Jamaica, nail salon Kingston Jamaica, gel nails Kingston, acrylic nails Kingston Jamaica, nail art Jamaica, beauty salon Hope Road Kingston, nail technician Kingston, book nail appointment Jamaica">
 <meta name="author" content="ATM BEAUTY STYLES">
 <link rel="canonical" href="https://atmbeautystyles.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ATM BEAUTY STYLES – Book Your Appointment">
-<meta property="og:description" content="Premium hair & beauty services in Kingston, Jamaica. Book your appointment online now.">
+<meta property="og:title" content="ATM BEAUTY STYLES – Book Your Nail Appointment">
+<meta property="og:description" content="Premium nail services in Kingston, Jamaica. Book your nail appointment online now.">
 <meta property="og:site_name" content="ATM BEAUTY STYLES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="referrer" content="no-referrer-when-downgrade">
@@ -19,10 +19,10 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HairSalon",
+  "@type": "NailSalon",
   "name": "ATM BEAUTY STYLES",
   "url": "https://atmbeautystyles.com",
-  "description": "Premium hair and beauty salon offering lashes, braids, weaves, colour and more in Kingston, Jamaica.",
+  "description": "Premium nail salon offering gel nails, acrylics, nail art, pedicures and more in Kingston, Jamaica.",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -665,7 +665,7 @@
 
 <!-- Side Menu -->
 <div class="menu" id="menu">
-  <a onclick="showSection('gallerySection'); closeMenu();">✨ STYLES</a>
+  <a onclick="showSection('gallerySection'); closeMenu();">💅 STYLES</a>
   <a onclick="showSection('bookingSection'); closeMenu();">📅 BOOKING</a>
   <a onclick="showSection('reviewsSection'); closeMenu();">⭐ REVIEWS</a>
   <a onclick="showSection('walkInPriceSection'); closeMenu();">💰 PRICE LIST</a>
@@ -728,9 +728,9 @@
     <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hours</span><span>8:00 AM – 5:00 PM</span></div>
     <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Sunday</span><span>Closed</span></div>
     <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">After 5 PM</span><span>Late Night Fee: $2,500</span></div>
-    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hair Length</span><span>4 inches &amp; over only</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Nail Condition</span><span>Clean &amp; trimmed</span></div>
     <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Guests</span><span>No extra company</span></div>
-    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Hair Condition</span><span>Must be clean</span></div>
+    <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Nails</span><span>No infections or open wounds</span></div>
     <div style="display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted rgba(200,68,106,0.15);"><span style="color:var(--muted);">Deposit</span><span style="color:var(--rose); font-weight:700;">$2,000 required</span></div>
     <div style="margin-top:10px; padding:8px 12px; background:rgba(200,68,106,0.06); border:1px solid rgba(200,68,106,0.2); border-radius:6px;">
       <div style="font-weight:700; color:var(--gold); font-size:10px; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">⌛ Lateness Policy</div>
@@ -757,55 +757,53 @@
       <option value="">Complete form to see available slots</option>
     </select>
 
-    <!-- Hair Service (direct — no category step) -->
+    <!-- Nail Service (direct — no category step) -->
     <div id="adultServiceWrap">
-      <label for="adultService">Hair Service:</label>
+      <label for="adultService">Nail Service:</label>
       <select id="adultService" onchange="onServiceChange();">
         <option value="NONE">— Choose Your Service —</option>
-        <optgroup label="Braids">
-          <option value="hair-Knotless Box Braids">Knotless Box Braids — from $8,000</option>
-          <option value="hair-Boho Knotless Braids">Boho Knotless Braids — from $9,000</option>
-          <option value="hair-Goddess Knotless Braids">Goddess Knotless Braids — from $9,500</option>
-          <option value="hair-Tribal Braids">Tribal Braids — from $8,000</option>
-          <option value="hair-Fulani Braids">Fulani Braids — from $8,500</option>
-          <option value="hair-Lemonade Braids">Lemonade Braids — from $9,500</option>
-          <option value="hair-Box Braids">Box Braids — from $7,500</option>
-          <option value="hair-Jumbo Braids">Jumbo Braids — from $8,000</option>
+        <optgroup label="Gel Nails">
+          <option value="nail-Basic Gel Manicure">Basic Gel Manicure — from $3,500</option>
+          <option value="nail-Gel French Tips">Gel French Tips — from $4,000</option>
+          <option value="nail-Gel Ombre">Gel Ombre — from $4,500</option>
+          <option value="nail-Builder Gel">Builder Gel — from $5,000</option>
         </optgroup>
-        <optgroup label="Twists">
-          <option value="hair-Island Twist">Island Twist — from $10,000</option>
-          <option value="hair-Passion Twists">Passion Twists — from $8,500</option>
-          <option value="hair-Mini Twists">Mini Twists — from $10,000</option>
+        <optgroup label="Acrylic Nails">
+          <option value="nail-Full Set Acrylic">Full Set Acrylic — from $5,000</option>
+          <option value="nail-Acrylic Fill">Acrylic Fill — from $3,000</option>
+          <option value="nail-Acrylic with Nail Art">Acrylic with Nail Art — from $6,000</option>
         </optgroup>
-        <optgroup label="Locs">
-          <option value="hair-Soft Locs">Soft Locs — from $10,000</option>
-          <option value="hair-Butterfly Locs">Butterfly Locs — from $11,000</option>
-          <option value="hair-Faux Locs">Faux Locs — from $9,000</option>
+        <optgroup label="Nail Extensions">
+          <option value="nail-Coffin Extensions">Coffin Extensions — from $6,000</option>
+          <option value="nail-Almond Extensions">Almond Extensions — from $6,000</option>
+          <option value="nail-Stiletto Extensions">Stiletto Extensions — from $7,000</option>
+          <option value="nail-Square Extensions">Square Extensions — from $5,500</option>
         </optgroup>
-        <optgroup label="Cornrows">
-          <option value="hair-Straight Back Cornrows">Straight Back Cornrows — from $5,000</option>
-          <option value="hair-Design Cornrows">Design Cornrows — from $5,000</option>
-          <option value="hair-Zig-Zag Cornrows">Zig-Zag Cornrows — from $5,000</option>
+        <optgroup label="Nail Art">
+          <option value="nail-Simple Nail Art">Simple Nail Art — from $1,500</option>
+          <option value="nail-Medium Nail Art">Medium Nail Art — from $2,500</option>
+          <option value="nail-Complex Nail Art">Complex Nail Art — from $3,500</option>
+          <option value="nail-3D Nail Art">3D Nail Art — from $4,500</option>
         </optgroup>
-        <optgroup label="Weaves">
-          <option value="hair-Natural Sew-In">Natural Sew-In — from $8,000</option>
-          <option value="hair-Closure Sew-In">Closure Sew-In — from $10,000</option>
-          <option value="hair-Frontal Sew-In">Frontal Sew-In — from $12,000</option>
+        <optgroup label="Manicure">
+          <option value="nail-Classic Manicure">Classic Manicure — from $2,000</option>
+          <option value="nail-Spa Manicure">Spa Manicure — from $3,000</option>
+          <option value="nail-Paraffin Manicure">Paraffin Manicure — from $3,500</option>
         </optgroup>
-        <optgroup label="Quick Weave">
-          <option value="hair-Basic Quick Weave">Basic Quick Weave — from $5,000</option>
-          <option value="hair-Styled Quick Weave">Styled Quick Weave — from $6,000</option>
-          <option value="hair-Closure Quick Weave">Closure Quick Weave — from $7,000</option>
+        <optgroup label="Pedicure">
+          <option value="nail-Classic Pedicure">Classic Pedicure — from $2,500</option>
+          <option value="nail-Spa Pedicure">Spa Pedicure — from $3,500</option>
+          <option value="nail-Gel Pedicure">Gel Pedicure — from $4,000</option>
         </optgroup>
-        <optgroup label="Ponytails">
-          <option value="hair-Sleek Ponytail">Sleek Ponytail — from $4,500</option>
-          <option value="hair-Braided Ponytail">Braided Ponytail — from $5,000</option>
-          <option value="hair-Half-Up Half-Down Ponytail">Half-Up Half-Down Ponytail — from $7,000</option>
+        <optgroup label="Nail Removal">
+          <option value="nail-Gel Removal">Gel Removal — from $1,500</option>
+          <option value="nail-Acrylic Removal">Acrylic Removal — from $2,000</option>
+          <option value="nail-Extension Removal">Extension Removal — from $2,000</option>
         </optgroup>
       </select>
     </div>
 
-    <input type="hidden" id="haircutType" value="NONE"/>
+    <input type="hidden" id="nailType" value="NONE"/>
 
     <div id="serviceIncludesCard" style="display:none; margin-bottom:8px; border-radius:10px; overflow:hidden; border:1px solid rgba(200,68,106,0.2); background:#fff;"></div>
 
@@ -825,7 +823,7 @@
 <div class="content-section" id="reviewsSection">
   <h1 class="page-title">Client Reviews</h1>
   <div id="reviewPrompt" style="display:none; max-width:500px; margin:20px auto; background:var(--white); color:var(--rose); border:1px solid rgba(200,68,106,0.2); border-radius:10px; padding:15px; text-align:center; font-weight:600; letter-spacing:0.5px; box-shadow:0 2px 12px rgba(200,68,106,0.08);">
-    How was your experience? Leave us a review! 🌸
+    How was your experience? Leave us a review! 💅
   </div>
   <form id="reviewForm" style="max-width:85%; margin:10px auto; text-align:center;">
     <div style="max-width:50%; margin:0 auto;">
@@ -867,10 +865,10 @@
       </div>
     </div>
 
-    <!-- HAIR SERVICES (expandable) -->
+    <!-- NAIL SERVICES (expandable) -->
     <div class="price-card">
       <div class="price-card-header">
-        <span>🌸 Hair Services</span>
+        <span>💅 Nail Services</span>
       </div>
       <div style="padding:8px 14px 14px;" id="hairPriceList"></div>
     </div>
@@ -897,95 +895,45 @@
     </style>
 
     <script>
-      (function buildHairPriceList() {
+      (function buildNailPriceList() {
         const PRICE_DATA = [
-          { group: 'Braids', styles: [
-            { name: 'Knotless Box Braids', sizes: {
-                'Large': [['Bra-strap length',8000],['Mid-back length',9000],['Waist length',10000],['Hip length',11000],['Tailbone length',12000],['Classic length',14000],['Mid-thigh length',18000]],
-                'Medium': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',11000],['Hip length',12000],['Tailbone length',13000],['Classic length',16000],['Mid-thigh length',20000]],
-                'Small': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',12000],['Hip length',13000],['Tailbone length',15000],['Classic length',17000],['Mid-thigh length',22000]]
-            }},
-            { name: 'Boho Knotless Braids', sizes: {
-                'Large': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',20000],['Mid-thigh length',23000]],
-                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]],
-                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]]
-            }},
-            { name: 'Goddess Knotless Braids', sizes: {
-                'Large': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',20500],['Mid-thigh length',23500]],
-                'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]],
-                'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]]
-            }},
-            { name: 'Tribal Braids', sizes: {
-                'Large': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',12000],['Hip length',14000],['Tailbone length',16000],['Classic length',18000],['Mid-thigh length',21000]],
-                'Medium': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',19000],['Mid-thigh length',22000]],
-                'Small': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',21000],['Mid-thigh length',24000]]
-            }},
-            { name: 'Fulani Braids', sizes: {
-                'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]],
-                'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',19500],['Mid-thigh length',22500]],
-                'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',21500],['Mid-thigh length',24500]]
-            }},
-            { name: 'Lemonade Braids', sizes: {
-                'Medium': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]],
-                'Small': [['Bra-strap length',11500],['Mid-back length',12500],['Waist length',14500],['Hip length',16500],['Tailbone length',18500],['Classic length',20500],['Mid-thigh length',23500]]
-            }},
-            { name: 'Box Braids', sizes: {
-                'Large': [['Bra-strap length',7500],['Mid-back length',8500],['Waist length',9500],['Hip length',10500],['Tailbone length',11500],['Classic length',13500],['Mid-thigh length',17000]],
-                'Medium': [['Bra-strap length',8500],['Mid-back length',9500],['Waist length',10500],['Hip length',11500],['Tailbone length',12500],['Classic length',15000],['Mid-thigh length',19000]],
-                'Small': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',11500],['Hip length',12500],['Tailbone length',14000],['Classic length',16000],['Mid-thigh length',21000]]
-            }},
-            { name: 'Jumbo Braids', subtitle: 'Large only', sizes: {
-                'Large': [['Mid-back length',8000],['Waist length',9000],['Hip length',10000],['Tailbone length',11000],['Classic length',13000],['Mid-thigh length',16000]]
-            }}
+          { group: 'Gel Nails', styles: [
+            { name: 'Basic Gel Manicure', sizes: { 'Options': [['Short',3500],['Medium',4000],['Long',4500]] }},
+            { name: 'Gel French Tips', sizes: { 'Options': [['Short',4000],['Medium',4500],['Long',5000]] }},
+            { name: 'Gel Ombre', sizes: { 'Options': [['Short',4500],['Medium',5000],['Long',5500]] }},
+            { name: 'Builder Gel', sizes: { 'Options': [['Short',5000],['Medium',5500],['Long',6000]] }}
           ]},
-          { group: 'Twists', styles: [
-            { name: 'Island Twist', sizes: {
-                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]],
-                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]]
-            }},
-            { name: 'Passion Twists', sizes: {
-                'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500]],
-                'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500]],
-                'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500]]
-            }},
-            { name: 'Mini Twists', sizes: {
-                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000]],
-                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000]]
-            }}
+          { group: 'Acrylic Nails', styles: [
+            { name: 'Full Set Acrylic', sizes: { 'Options': [['Short',5000],['Medium',6000],['Long',7000]] }},
+            { name: 'Acrylic Fill', sizes: { 'Options': [['Standard',3000],['With Design',4000]] }},
+            { name: 'Acrylic with Nail Art', sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] }}
           ]},
-          { group: 'Locs', styles: [
-            { name: 'Soft Locs', sizes: {
-                'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]],
-                'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]]
-            }},
-            { name: 'Butterfly Locs', sizes: {
-                'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]],
-                'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]]
-            }},
-            { name: 'Faux Locs', sizes: {
-                'Medium': [['Armpit length',9000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]],
-                'Small': [['Armpit length',9000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]]
-            }}
+          { group: 'Nail Extensions', styles: [
+            { name: 'Coffin Extensions', sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] }},
+            { name: 'Almond Extensions', sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] }},
+            { name: 'Stiletto Extensions', sizes: { 'Options': [['Short',7000],['Medium',8000],['Long',9000]] }},
+            { name: 'Square Extensions', sizes: { 'Options': [['Short',5500],['Medium',6500],['Long',7500]] }}
           ]},
-          { group: 'Cornrows', styles: [
-            { name: 'Straight Back Cornrows', sizes: { 'Options': [['2–4 Cornrows',5000],['5–6 Cornrows',5500],['7–8 Cornrows',6000],['9–10 Cornrows',6500],['11–12 Cornrows',7000]] }},
-            { name: 'Design Cornrows', sizes: { 'Options': [['Simple Design',5000],['Medium Design',6000],['Detailed Design',7000],['Complex / Custom Design','8,000 – 9,000']] }},
-            { name: 'Zig-Zag Cornrows', sizes: { 'Options': [['Basic Zig-Zag',5000],['Medium Pattern',6000],['Detailed Pattern',7000],['Complex Pattern','8,000 – 9,000']] }}
+          { group: 'Nail Art', styles: [
+            { name: 'Simple Nail Art', sizes: { 'Options': [['Per Nail',1500],['Full Set',3000]] }},
+            { name: 'Medium Nail Art', sizes: { 'Options': [['Per Nail',2500],['Full Set',5000]] }},
+            { name: 'Complex Nail Art', sizes: { 'Options': [['Per Nail',3500],['Full Set',7000]] }},
+            { name: '3D Nail Art', sizes: { 'Options': [['Per Nail',4500],['Full Set',9000]] }}
           ]},
-          { group: 'Weave Services', styles: [
-            { name: 'Natural Sew-In', sizes: { 'Options': [['Basic Install','8,000+']] }},
-            { name: 'Closure Sew-In', sizes: { 'Options': [['Basic Install','10,000+']] }},
-            { name: 'Frontal Sew-In', sizes: { 'Options': [['Basic Install','12,000+']] }}
+          { group: 'Manicure', styles: [
+            { name: 'Classic Manicure', sizes: { 'Options': [['Standard',2000]] }},
+            { name: 'Spa Manicure', sizes: { 'Options': [['Standard',3000]] }},
+            { name: 'Paraffin Manicure', sizes: { 'Options': [['Standard',3500]] }}
           ]},
-          { group: 'Quick Weave', styles: [
-            { name: 'Basic Quick Weave', sizes: { 'Options': [['Basic Install',5000],['With Styling',6000]] }},
-            { name: 'Styled Quick Weave', sizes: { 'Options': [['Basic Install',6000],['With Styling',7000]] }},
-            { name: 'Closure Quick Weave', sizes: { 'Options': [['Basic Install',7000],['With Styling',8000]] }}
+          { group: 'Pedicure', styles: [
+            { name: 'Classic Pedicure', sizes: { 'Options': [['Standard',2500]] }},
+            { name: 'Spa Pedicure', sizes: { 'Options': [['Standard',3500]] }},
+            { name: 'Gel Pedicure', sizes: { 'Options': [['Standard',4000]] }}
           ]},
-          { group: 'Ponytails', styles: [
-            { name: 'Sleek Ponytail', sizes: { 'Options': [['Basic Style','4,500+']] }},
-            { name: 'Braided Ponytail', sizes: { 'Options': [['Basic Style','5,000+']] }},
-            { name: 'Half-Up Half-Down Ponytail', sizes: { 'Options': [['Basic Style','7,000+']] }}
+          { group: 'Nail Removal', styles: [
+            { name: 'Gel Removal', sizes: { 'Options': [['Standard',1500]] }},
+            { name: 'Acrylic Removal', sizes: { 'Options': [['Standard',2000]] }},
+            { name: 'Extension Removal', sizes: { 'Options': [['Standard',2000]] }}
           ]}
         ];
         function fmtPrice(p) { return typeof p === 'number' ? '$' + p.toLocaleString() : '$' + p; }
@@ -1020,7 +968,7 @@
             html += `</div></div>`;
           });
         });
-        html += `<div style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(200,68,106,0.1);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:6px;">Optional Extra</div><div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="font-size:13px;color:var(--text);">Custom Design / Accessories</span><span style="font-size:13px;color:var(--rose);font-weight:700;white-space:nowrap;">$500+</span></div></div>`;
+        html += `<div style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(200,68,106,0.1);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:6px;">Optional Extra</div><div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="font-size:13px;color:var(--text);">Nail Gems / Charms / Foil</span><span style="font-size:13px;color:var(--rose);font-weight:700;white-space:nowrap;">$500+</span></div></div>`;
         container.innerHTML = html;
       })();
     </script>
@@ -1208,7 +1156,7 @@
         categories[category].push(item.url);
       });
       if (Object.keys(categories).length === 0) {
-        galleryContainer.innerHTML = '<p style="text-align:center;margin-top:80px;color:var(--muted);font-size:15px;font-family:\'Montserrat\',sans-serif;">No styles in the gallery yet. Check back soon! 🌸</p>';
+        galleryContainer.innerHTML = '<p style="text-align:center;margin-top:80px;color:var(--muted);font-size:15px;font-family:\'Montserrat\',sans-serif;">No nail styles in the gallery yet. Check back soon! 💅</p>';
         return;
       }
       for (const category in categories) {
@@ -1219,7 +1167,7 @@
               <div class="gallery-grid" id="gallery-${category.replace(/\s+/g,'-')}"></div>
             </div>
             <div style="text-align:center; margin-top:10px; margin-bottom:10px;">
-              <button onclick="showSection('bookingSection')" class="book-now-btn">BOOK THIS LOOK ✨</button>
+              <button onclick="showSection('bookingSection')" class="book-now-btn">BOOK THIS LOOK 💅</button>
             </div>
           </div>
         `;
@@ -1249,35 +1197,24 @@
 
   // ===== SERVICE DURATIONS (minutes) =====
   const SERVICE_DURATIONS = {
-    'Large — Bra-strap length': 240, 'Large — Mid-back length': 300, 'Large — Waist length': 330,
-    'Large — Hip length': 360, 'Large — Tailbone length': 390, 'Large — Classic length': 420,
-    'Large — Mid-thigh length': 480,
-    'Medium — Armpit length': 300, 'Medium — Bra-strap length': 330, 'Medium — Mid-back length': 360,
-    'Medium — Waist length': 390, 'Medium — Hip length': 420, 'Medium — Tailbone length': 450,
-    'Medium — Classic length': 510, 'Medium — Mid-thigh length': 600,
-    'Small — Armpit length': 360, 'Small — Bra-strap length': 390, 'Small — Mid-back length': 420,
-    'Small — Waist length': 450, 'Small — Hip length': 480, 'Small — Tailbone length': 540,
-    'Small — Classic length': 600, 'Small — Mid-thigh length': 720,
-    '2–4 Cornrows': 45, '5–6 Cornrows': 60, '7–8 Cornrows': 90, '9–10 Cornrows': 120, '11–12 Cornrows': 150,
-    'Simple Design': 90, 'Medium Design': 120, 'Detailed Design': 150, 'Complex / Custom Design': 210,
-    'Basic Zig-Zag': 90, 'Medium Pattern': 120, 'Detailed Pattern': 150, 'Complex Pattern': 210,
-    'Basic Install': 150, 'With Styling': 180, 'Basic Style': 60,
+    'Short': 60, 'Medium': 75, 'Long': 90,
+    'Standard': 60, 'With Design': 75,
+    'Per Nail': 15, 'Full Set': 90,
+    'Basic Install': 90, 'With Styling': 120, 'Basic Style': 60,
   };
 
   const STYLE_DEFAULT_DURATIONS = {
-    'Knotless Box Braids': 360, 'Boho Knotless Braids': 390, 'Goddess Knotless Braids': 420,
-    'Tribal Braids': 330, 'Fulani Braids': 360, 'Lemonade Braids': 360,
-    'Box Braids': 300, 'Jumbo Braids': 240,
-    'Island Twist': 390, 'Passion Twists': 360, 'Mini Twists': 420,
-    'Soft Locs': 360, 'Butterfly Locs': 390, 'Faux Locs': 360,
-    'Straight Back Cornrows': 90, 'Design Cornrows': 120, 'Zig-Zag Cornrows': 120,
-    'Natural Sew-In': 210, 'Closure Sew-In': 270, 'Frontal Sew-In': 330,
-    'Basic Quick Weave': 90, 'Styled Quick Weave': 120, 'Closure Quick Weave': 150,
-    'Sleek Ponytail': 45, 'Braided Ponytail': 60, 'Half-Up Half-Down Ponytail': 90,
+    'Basic Gel Manicure': 60, 'Gel French Tips': 75, 'Gel Ombre': 75, 'Builder Gel': 90,
+    'Full Set Acrylic': 90, 'Acrylic Fill': 60, 'Acrylic with Nail Art': 120,
+    'Coffin Extensions': 90, 'Almond Extensions': 90, 'Stiletto Extensions': 90, 'Square Extensions': 90,
+    'Simple Nail Art': 30, 'Medium Nail Art': 60, 'Complex Nail Art': 90, '3D Nail Art': 120,
+    'Classic Manicure': 45, 'Spa Manicure': 60, 'Paraffin Manicure': 75,
+    'Classic Pedicure': 60, 'Spa Pedicure': 75, 'Gel Pedicure': 90,
+    'Gel Removal': 30, 'Acrylic Removal': 45, 'Extension Removal': 45,
   };
 
   function getServiceDurationByKey(key) {
-    const styleName = key.replace(/^hair-/, '');
+    const styleName = key.replace(/^nail-/, '').replace(/^hair-/, '');
     if (selectedCutItem) {
       const itemKey = selectedCutItem; // e.g. "Large — Bra-strap length"
       if (SERVICE_DURATIONS[itemKey]) return SERVICE_DURATIONS[itemKey];
@@ -1293,7 +1230,7 @@
   function showEstimateTime() {}
 
   // ===== ADDON PRICES =====
-  const addonPrices = { 'Custom Design / Accessories': 500 };
+  const addonPrices = { 'Nail Gems / Charms / Foil': 500 };
   const cutPriceOverrides = {};
 
   let selectedCutPrice = null;
@@ -1430,40 +1367,38 @@
 
   const pricingCardDefs = {};
 
-  // ---- BUILD ALL HAIR SERVICES ----
+  // ---- BUILD ALL NAIL SERVICES ----
   (function() {
-    const hairAddons = [{name:'Custom Design / Accessories', price:'$500+'}];
-    const hairStyles = {
-      'Knotless Box Braids': { sizes: { 'Large': [['Bra-strap length',8000],['Mid-back length',9000],['Waist length',10000],['Hip length',11000],['Tailbone length',12000],['Classic length',14000],['Mid-thigh length',18000]], 'Medium': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',11000],['Hip length',12000],['Tailbone length',13000],['Classic length',16000],['Mid-thigh length',20000]], 'Small': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',12000],['Hip length',13000],['Tailbone length',15000],['Classic length',17000],['Mid-thigh length',22000]] } },
-      'Boho Knotless Braids': { sizes: { 'Large': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',20000],['Mid-thigh length',23000]], 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]] } },
-      'Goddess Knotless Braids': { sizes: { 'Large': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',20500],['Mid-thigh length',23500]], 'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]], 'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]] } },
-      'Tribal Braids': { sizes: { 'Large': [['Armpit length',8000],['Bra-strap length',9000],['Mid-back length',10000],['Waist length',12000],['Hip length',14000],['Tailbone length',16000],['Classic length',18000],['Mid-thigh length',21000]], 'Medium': [['Armpit length',9000],['Bra-strap length',10000],['Mid-back length',11000],['Waist length',13000],['Hip length',15000],['Tailbone length',17000],['Classic length',19000],['Mid-thigh length',22000]], 'Small': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',21000],['Mid-thigh length',24000]] } },
-      'Fulani Braids': { sizes: { 'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]], 'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500],['Classic length',19500],['Mid-thigh length',22500]], 'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',21500],['Mid-thigh length',24500]] } },
-      'Lemonade Braids': { sizes: { 'Medium': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500],['Classic length',18500],['Mid-thigh length',21500]], 'Small': [['Bra-strap length',11500],['Mid-back length',12500],['Waist length',14500],['Hip length',16500],['Tailbone length',18500],['Classic length',20500],['Mid-thigh length',23500]] } },
-      'Box Braids': { sizes: { 'Large': [['Bra-strap length',7500],['Mid-back length',8500],['Waist length',9500],['Hip length',10500],['Tailbone length',11500],['Classic length',13500],['Mid-thigh length',17000]], 'Medium': [['Bra-strap length',8500],['Mid-back length',9500],['Waist length',10500],['Hip length',11500],['Tailbone length',12500],['Classic length',15000],['Mid-thigh length',19000]], 'Small': [['Bra-strap length',9500],['Mid-back length',10500],['Waist length',11500],['Hip length',12500],['Tailbone length',14000],['Classic length',16000],['Mid-thigh length',21000]] } },
-      'Jumbo Braids': { subtitle:'Large only', sizes: { 'Large': [['Mid-back length',8000],['Waist length',9000],['Hip length',10000],['Tailbone length',11000],['Classic length',13000],['Mid-thigh length',16000]] } },
-      'Island Twist': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',15000],['Hip length',17000],['Tailbone length',19000],['Classic length',22000],['Mid-thigh length',24000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',17000],['Hip length',19000],['Tailbone length',21000],['Classic length',24000],['Mid-thigh length',26000]] } },
-      'Passion Twists': { sizes: { 'Large': [['Armpit length',8500],['Bra-strap length',9500],['Mid-back length',10500],['Waist length',12500],['Hip length',14500],['Tailbone length',16500]], 'Medium': [['Armpit length',9500],['Bra-strap length',10500],['Mid-back length',11500],['Waist length',13500],['Hip length',15500],['Tailbone length',17500]], 'Small': [['Armpit length',11500],['Bra-strap length',12500],['Mid-back length',13500],['Waist length',15500],['Hip length',17500],['Tailbone length',19500]] } },
-      'Mini Twists': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000]] } },
-      'Soft Locs': { sizes: { 'Medium': [['Armpit length',10000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]], 'Small': [['Armpit length',12000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]] } },
-      'Butterfly Locs': { sizes: { 'Medium': [['Armpit length',11000],['Bra-strap length',12000],['Mid-back length',13000],['Waist length',15500],['Hip length',17500],['Tailbone length',19500],['Classic length',22500],['Mid-thigh length',25500]], 'Small': [['Armpit length',13000],['Bra-strap length',14000],['Mid-back length',15000],['Waist length',17500],['Hip length',19500],['Tailbone length',21500],['Classic length',24500],['Mid-thigh length',27500]] } },
-      'Faux Locs': { sizes: { 'Medium': [['Armpit length',9000],['Bra-strap length',11000],['Mid-back length',12000],['Waist length',14000],['Hip length',16000],['Tailbone length',18000]], 'Small': [['Armpit length',9000],['Bra-strap length',13000],['Mid-back length',14000],['Waist length',16000],['Hip length',18000],['Tailbone length',20000]] } },
-      'Straight Back Cornrows': { sizes: { 'Options': [['2–4 Cornrows',5000],['5–6 Cornrows',5500],['7–8 Cornrows',6000],['9–10 Cornrows',6500],['11–12 Cornrows',7000]] } },
-      'Design Cornrows': { sizes: { 'Options': [['Simple Design',5000],['Medium Design',6000],['Detailed Design',7000],['Complex / Custom Design',9000]] } },
-      'Zig-Zag Cornrows': { sizes: { 'Options': [['Basic Zig-Zag',5000],['Medium Pattern',6000],['Detailed Pattern',7000],['Complex Pattern',9000]] } },
-      'Natural Sew-In': { sizes: { 'Options': [['Basic Install',8000]] } },
-      'Closure Sew-In': { sizes: { 'Options': [['Basic Install',10000]] } },
-      'Frontal Sew-In': { sizes: { 'Options': [['Basic Install',12000]] } },
-      'Basic Quick Weave': { sizes: { 'Options': [['Basic Install',5000],['With Styling',6000]] } },
-      'Styled Quick Weave': { sizes: { 'Options': [['Basic Install',6000],['With Styling',7000]] } },
-      'Closure Quick Weave': { sizes: { 'Options': [['Basic Install',7000],['With Styling',8000]] } },
-      'Sleek Ponytail': { sizes: { 'Options': [['Basic Style',4500]] } },
-      'Braided Ponytail': { sizes: { 'Options': [['Basic Style',5000]] } },
-      'Half-Up Half-Down Ponytail': { sizes: { 'Options': [['Basic Style',7000]] } },
+    const nailAddons = [{name:'Nail Gems / Charms / Foil', price:'$500+', isAddon:true}];
+    const nailStyles = {
+      'Basic Gel Manicure': { sizes: { 'Options': [['Short',3500],['Medium',4000],['Long',4500]] } },
+      'Gel French Tips': { sizes: { 'Options': [['Short',4000],['Medium',4500],['Long',5000]] } },
+      'Gel Ombre': { sizes: { 'Options': [['Short',4500],['Medium',5000],['Long',5500]] } },
+      'Builder Gel': { sizes: { 'Options': [['Short',5000],['Medium',5500],['Long',6000]] } },
+      'Full Set Acrylic': { sizes: { 'Options': [['Short',5000],['Medium',6000],['Long',7000]] } },
+      'Acrylic Fill': { sizes: { 'Options': [['Standard',3000],['With Design',4000]] } },
+      'Acrylic with Nail Art': { sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] } },
+      'Coffin Extensions': { sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] } },
+      'Almond Extensions': { sizes: { 'Options': [['Short',6000],['Medium',7000],['Long',8000]] } },
+      'Stiletto Extensions': { sizes: { 'Options': [['Short',7000],['Medium',8000],['Long',9000]] } },
+      'Square Extensions': { sizes: { 'Options': [['Short',5500],['Medium',6500],['Long',7500]] } },
+      'Simple Nail Art': { sizes: { 'Options': [['Per Nail',1500],['Full Set',3000]] } },
+      'Medium Nail Art': { sizes: { 'Options': [['Per Nail',2500],['Full Set',5000]] } },
+      'Complex Nail Art': { sizes: { 'Options': [['Per Nail',3500],['Full Set',7000]] } },
+      '3D Nail Art': { sizes: { 'Options': [['Per Nail',4500],['Full Set',9000]] } },
+      'Classic Manicure': { sizes: { 'Options': [['Standard',2000]] } },
+      'Spa Manicure': { sizes: { 'Options': [['Standard',3000]] } },
+      'Paraffin Manicure': { sizes: { 'Options': [['Standard',3500]] } },
+      'Classic Pedicure': { sizes: { 'Options': [['Standard',2500]] } },
+      'Spa Pedicure': { sizes: { 'Options': [['Standard',3500]] } },
+      'Gel Pedicure': { sizes: { 'Options': [['Standard',4000]] } },
+      'Gel Removal': { sizes: { 'Options': [['Standard',1500]] } },
+      'Acrylic Removal': { sizes: { 'Options': [['Standard',2000]] } },
+      'Extension Removal': { sizes: { 'Options': [['Standard',2000]] } },
     };
 
-    Object.entries(hairStyles).forEach(([style, data]) => {
-      const key = 'hair-' + style;
+    Object.entries(nailStyles).forEach(([style, data]) => {
+      const key = 'nail-' + style;
       const subtitle = data.subtitle ? ` (${data.subtitle})` : '';
       let minPrice = Infinity;
       Object.values(data.sizes).forEach(lengths => lengths.forEach(([, price]) => { if (price < minPrice) minPrice = price; }));
@@ -1471,34 +1406,32 @@
       const sections = [];
       Object.entries(data.sizes).forEach(([sizeName, lengths]) => {
         sections.push({
-          title: sizeName,
+          title: sizeName === 'Options' ? '' : sizeName,
           items: lengths.map(([lengthName, price]) => {
-            const cutKey = sizeName === 'Options' ? lengthName : `${sizeName} — ${lengthName}`;
-            const dur = SERVICE_DURATIONS[cutKey] || SERVICE_DURATIONS[lengthName] || null;
-            return { name: cutKey, price: '$' + price.toLocaleString(), durationMins: dur };
+            const cutKey = lengthName;
+            return { name: cutKey, price: '$' + price.toLocaleString(), durationMins: null };
           })
         });
       });
-      sections.push({ title: 'Optional Add-Ons:', items: hairAddons.map(a => ({...a, isAddon:true})) });
+      sections.push({ title: 'Optional Add-Ons:', items: nailAddons });
       const overrides = {};
       Object.entries(data.sizes).forEach(([sizeName, lengths]) => {
         lengths.forEach(([lengthName, price]) => {
-          const cutKey = sizeName === 'Options' ? lengthName : `${sizeName} — ${lengthName}`;
-          overrides[cutKey] = price;
+          overrides[lengthName] = price;
         });
       });
       cutPriceOverrides[key] = overrides;
       pricingCardDefs[key] = {
-        label: 'Hair — ' + style + subtitle + ' (from $' + minPrice.toLocaleString() + ')',
+        label: 'Nails — ' + style + subtitle + ' (from $' + minPrice.toLocaleString() + ')',
         basePrice: 0,
-        html: () => buildPricingCard('🌸 ' + style.toUpperCase() + subtitle.toUpperCase() + ' | from $' + minPrice.toLocaleString(), sections, 0)
+        html: () => buildPricingCard('💅 ' + style.toUpperCase() + subtitle.toUpperCase() + ' | from $' + minPrice.toLocaleString(), sections, 0)
       };
     });
   })();
 
   function onServiceChange() {
     const svc = document.getElementById('adultService').value;
-    const hidden = document.getElementById('haircutType');
+    const hidden = document.getElementById('nailType');
     const card = document.getElementById('serviceIncludesCard');
     clearSelections();
     if (hidden) hidden.value = (svc === 'NONE') ? 'NONE' : svc;
@@ -1654,7 +1587,7 @@
         const [year, month, day] = date.split("-");
         const formattedDate = new Date(year, month-1, day).toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" });
         const totalStr = total > 0 ? `\n💰 Total: $${total.toLocaleString()}` : '';
-        const message = `🌸 NEW BOOKING — ATM BEAUTY STYLES\n\n🔢 Booking #: ${bookingNumber}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n⏰ Time: ${time}\n✨ Service: ${services}${totalStr}`;
+        const message = `💅 NEW BOOKING — ATM BEAUTY STYLES\n\n🔢 Booking #: ${bookingNumber}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n⏰ Time: ${time}\n✨ Service: ${services}${totalStr}`;
         const telegramBotToken = "8624976021:AAH66ZV65h7yF2TzWKzxi3uATSmq6ywWFS4";
         const telegramChatId = "-1003703378968";
         fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: telegramChatId, text: message, parse_mode:"HTML" }) }).catch(()=>{});
@@ -1673,7 +1606,7 @@
             <p style="font-size:13px; margin:0 0 12px; color:var(--muted); text-align:left; line-height:1.6;">✨ ${services}</p>
             ${total > 0 ? `<div style="background:var(--blush2);border:1px solid rgba(200,68,106,0.2);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-weight:700;font-size:16px;color:var(--rose);">💰 Total: $${total.toLocaleString()}</div>` : ''}
             <hr style="margin:16px 0; border:0; height:1px; background:rgba(200,68,106,0.1);">
-            <p style="font-size:14px; margin:10px 0; color:var(--text);">Thank you for booking with ATM Beauty Styles! We can't wait to see you. 🌸</p>
+            <p style="font-size:14px; margin:10px 0; color:var(--text);">Thank you for booking with ATM Beauty Styles! We can't wait to make your nails beautiful. 💅</p>
             <div style="background:#fff3f3;border:2px solid var(--rose);border-radius:6px;padding:12px;margin:10px 0;text-align:left;">
               <div style="font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rose2);margin-bottom:5px;">⚠️ Deposit Required</div>
               <div style="font-size:13px;color:var(--text);line-height:1.65;">Send your <strong>$2,000 deposit</strong> to <strong>Scotiabank · Anita Mcfarlane · Acc# 1031697</strong> (Savings). Use your booking reference as the note.</div>
@@ -1716,7 +1649,7 @@
     if (!name || !comment || selectedRating === 0) { msg.style.color = "red"; msg.textContent = "Please fill all fields and select a star rating."; return; }
     try {
       await db.collection('reviews').add({ name, comment, rating: selectedRating, timestamp: firebase.firestore.FieldValue.serverTimestamp(), uid: user.uid });
-      msg.style.color = "var(--rose)"; msg.textContent = "Thank you for your review! 🌸";
+      msg.style.color = "var(--rose)"; msg.textContent = "Thank you for your review! 💅";
       document.getElementById('reviewForm').reset();
       selectedRating = 0;
       document.querySelectorAll('#starRating span').forEach(s => s.style.color = '#ccc');
@@ -1742,7 +1675,7 @@
     const container = document.getElementById('reviewsContainer');
     container.innerHTML = "<p style='text-align:center;color:var(--muted);'>Loading reviews...</p>";
     db.collection('reviews').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-      if (snapshot.empty) { container.innerHTML = "<p style='text-align:center;color:var(--muted);'>No reviews yet. Be the first! 🌸</p>"; return; }
+      if (snapshot.empty) { container.innerHTML = "<p style='text-align:center;color:var(--muted);'>No reviews yet. Be the first! 💅</p>"; return; }
       container.innerHTML = '';
       snapshot.forEach(doc => {
         const d = doc.data();
