@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>RAHVEEN BEAUTY – Book Your Appointment</title>
+<title>NATASHA BEAUTY – Book Your Appointment</title>
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="description" content="RAHVEEN BEAUTY – Premium hair & beauty services in Kingston, Jamaica. Lashes, braids, weaves, colour & more. Book your appointment today.">
-<meta name="keywords" content="Rahveen Beauty, Rahveen Beauty Jamaica, hair salon Kingston Jamaica, lashes Kingston, braids Kingston Jamaica, weaves Jamaica, beauty salon Hope Road Kingston, hair stylist Kingston, book hair appointment Jamaica">
-<meta name="author" content="RAHVEEN BEAUTY">
+<meta name="description" content="NATASHA BEAUTY – Premium hair & beauty services in Kingston, Jamaica. Lashes, braids, weaves, colour & more. Book your appointment today.">
+<meta name="keywords" content="Natasha Beauty, Natasha Beauty Jamaica, hair salon Kingston Jamaica, lashes Kingston, braids Kingston Jamaica, weaves Jamaica, beauty salon Hope Road Kingston, hair stylist Kingston, book hair appointment Jamaica">
+<meta name="author" content="NATASHA BEAUTY">
 <link rel="canonical" href="https://rahveenbeauty.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="RAHVEEN BEAUTY – Book Your Appointment">
+<meta property="og:title" content="NATASHA BEAUTY – Book Your Appointment">
 <meta property="og:description" content="Premium hair & beauty services in Kingston, Jamaica. Book your appointment online now.">
-<meta property="og:site_name" content="RAHVEEN BEAUTY">
+<meta property="og:site_name" content="NATASHA BEAUTY">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
@@ -20,7 +20,7 @@
 {
   "@context": "https://schema.org",
   "@type": "HairSalon",
-  "name": "RAHVEEN BEAUTY",
+  "name": "NATASHA BEAUTY",
   "url": "https://rahveenbeauty.com",
   "description": "Premium hair and beauty salon offering lashes, braids, weaves, colour and more in Kingston, Jamaica.",
   "priceRange": "$$",
@@ -647,7 +647,7 @@
 <!-- Header -->
 <div class="header-bar">
   <button class="menu-button" onclick="toggleMenu()">☰</button>
-  <div class="header-title">RAHVEEN BEAUTY</div>
+  <div class="header-title">NATASHA BEAUTY</div>
   <a class="location-button" href="https://maps.app.goo.gl/eCKXuvmy4bNCty3V7" target="_blank" aria-label="Location">
     <svg viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg" width="22" height="22" aria-hidden="true">
       <path d="M12 1.5 C6.2 1.5 1.8 5.9 1.8 11.6 c0 7.8 9.3 18.1 9.7 18.5 a0.7 0.7 0 0 0 1 0 C12.9 29.7 22.2 19.4 22.2 11.6 C22.2 5.9 17.8 1.5 12 1.5 Z" fill="#F2C4CE" stroke="#1C1016" stroke-width="1.2"/>
@@ -1654,7 +1654,7 @@
         const [year, month, day] = date.split("-");
         const formattedDate = new Date(year, month-1, day).toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" });
         const totalStr = total > 0 ? `\n💰 Total: $${total.toLocaleString()}` : '';
-        const message = `🌸 NEW BOOKING — RAHVEEN BEAUTY\n\n🔢 Booking #: ${bookingNumber}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n⏰ Time: ${time}\n✨ Service: ${services}${totalStr}`;
+        const message = `🌸 NEW BOOKING — NATASHA BEAUTY\n\n🔢 Booking #: ${bookingNumber}\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n⏰ Time: ${time}\n✨ Service: ${services}${totalStr}`;
         const telegramBotToken = "8624976021:AAH66ZV65h7yF2TzWKzxi3uATSmq6ywWFS4";
         const telegramChatId = "-1003703378968";
         fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ chat_id: telegramChatId, text: message, parse_mode:"HTML" }) }).catch(()=>{});
@@ -1673,7 +1673,7 @@
             <p style="font-size:13px; margin:0 0 12px; color:var(--muted); text-align:left; line-height:1.6;">✨ ${services}</p>
             ${total > 0 ? `<div style="background:var(--blush2);border:1px solid rgba(200,68,106,0.2);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-weight:700;font-size:16px;color:var(--rose);">💰 Total: $${total.toLocaleString()}</div>` : ''}
             <hr style="margin:16px 0; border:0; height:1px; background:rgba(200,68,106,0.1);">
-            <p style="font-size:14px; margin:10px 0; color:var(--text);">Thank you for booking with Rahveen Beauty! We can't wait to see you. 🌸</p>
+            <p style="font-size:14px; margin:10px 0; color:var(--text);">Thank you for booking with Natasha Beauty! We can't wait to see you. 🌸</p>
             <div style="background:#fff3f3;border:2px solid var(--rose);border-radius:6px;padding:12px;margin:10px 0;text-align:left;">
               <div style="font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rose2);margin-bottom:5px;">⚠️ Deposit Required</div>
               <div style="font-size:13px;color:var(--text);line-height:1.65;">Send your <strong>$2,000 deposit</strong> to <strong>Scotiabank · Anita Mcfarlane · Acc# 1031697</strong> (Savings). Use your booking reference as the note.</div>
